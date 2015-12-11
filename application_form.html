@@ -243,10 +243,90 @@
 			</div>
 		</div>
 		<div class="ct-2">ՀՀ ոստիկանության անձնագրային և վիզաների վարչություն</div>
-		<div class="ct-2-2">
-			<input class="name" type="text" placeholder="օր. Արաբկիրի անձնագրային բաժանմունքի պետ՝">
-		</div>
-		<div class="ct-2-2">
+		<div class="ct-2-2"> 
+			<select id="multiselect" onchange="selectedRegion();">
+			    <optgroup value="erevan" label ="ԵՐԵՎԱՆ">
+               	    <option value="avan">ԱՎԱՆ</option>
+                  	<option value="arabkir">ԱՐԱԲԿԻՐ</option>
+                    <option  value="davtashen">ԴԱՎԹԱՇԵՆ</option>
+					<option  value="erebuni">ԷՐԵԲՈՒՆԻ</option>
+                    <option value="kentron">ԿԵՆՏՐՈՆ</option>
+                    <option value="malatia"> ՄԱԼԱԹԻԱ</option>
+					<option value="mashtoc">ՄԱՇՏՈՑ</option>
+					<option value="marash">ՄԱՐԱՇ</option>
+					<option value="norq">ՆՈՐ ՆՈՐՔ</option>
+					<option value="nubarashen">ՆՈՒԲԱՐԱՇԵՆ</option>
+					<option value="charbax">ՉԱՐԲԱԽ</option>
+					<option value="qanaqer">ՔԱՆԱՔԵՌ-ԶԵՅԹՈՒՆ</option>
+               	</optgroup>
+               	<optgroup value="shirak" label ="ՇԻՐԱԿԻ ՄԱՐԶ">
+                    <option value="axuryan">ԱԽՈՒՐՅԱՆ</option>
+                    <option value="amasia">ԱՄԱՍԻԱ</option>
+                    <option value="ani">ԱՆԻ</option>
+                    <option value="ashocq">ԱՇՈՑՔ</option>
+				    <option value="artik">ԱՐԹԻԿ</option>
+				    <option value="gyumri_k">ԳՅՈՒՄՐՈՒ «ԿՈՒՄԱՅՐԻ»</option>
+				    <option value="gyumri_m">ԳՅՈՒՄՐՈՒ «ՄՈՒՇ»</option>
+				</optgroup>
+				<optgroup value="aragacotn" label ="ԱՐԱԳԱՑՈՏՆԻ ՄԱՐԶ">
+					<option value="ashtarak"> ԱՇՏԱՐԱԿ</option>
+					<option value="aparan">ԱՊԱՐԱՆ</option>
+					<option value="caxkahovit">ԾԱՂԿԱՀՈՎԻՏ</option>
+					<option value="talin">ԹԱԼԻՆ</option>
+				</optgroup>
+			    <optgroup value="ararat" label ="ԱՐԱՐԱՏԻ ՄԱՐԶ">
+					<option value="ararat">ԱՐԱՐԱՏ</oiption>
+					<option value="artashat">ԱՐՏԱՇԱՏ</oiption>
+					<option value="masis">ՄԱՍԻՍ</oiption>
+				</optgroup>
+				<optgroup value="armavir" label ="ԱՐՄԱՎԻՐԻ ՄԱՐԶ">
+					<option value="armavir">ԱՐՄԱՎԻՐ</option>
+					<option value="baxramyan">ԲԱՂՐԱՄՅԱՆ</option>
+					<option value="ejmiacin">ԷՋՄԻԱԾՆ</option>
+					<option value="mecamor">ՄԵԾԱՄՈՐ</option>
+               	  </optgroup>
+				  <optgroup value="gexarquniq" label ="ԳԵՂԱՐՔՈՒՆԻՔԻ ՄԱՐԶ">
+					   <option value="gavar">ԳԱՎԱՌ</option>
+					   <option value="armavir">ԱՐՄԱՎԻՐ</option>
+					   <option value="chambarak">ՃԱՄԲԱՐԱԿ</option>
+					   <option value="martuni">ՄԱՐՏՈՒՆԻ</option>
+					   <option value="sevan">ՍԵՎԱՆ</option>
+					   <option value="vardenis">ՎԱՐԴԵՆԻՍ</option>
+			       </optgroup>
+				   <optgroup value="syuniq" label ="ՍՅՈՒՆԻՔԻ ՄԱՐԶ">
+					   <option value="goris">ԳՈՐԻՍ</option>
+				       <option value="kapan">ԿԱՊԱՆ</option>	
+					   <option value="mexri">ՄԵՂՐԻ</option>
+					   <option value="sisian">ՍԻՍԻԱՆ</option>
+				   </optgroup>
+				   <optgroup value="lori" label ="ԼՈՌՈԻ ՄԱՐԶ">
+					   <option value="gugarq">ԳՈՒԳԱՐՔ</option>
+					   <option value="alaverdi">ԱԼԱՎԵՐԴԻ</option>
+					   <option value="spitak">ՍՊԻՏԱԿ</option>
+					   <option value="stepanavan">ՍՏԵՓԱՆԱՎԱՆ</option>
+					   <option value="vanadzor">ՎԱՆԱՁՈՐ</option>
+					</optgroup>
+					<optgroup value="tavush" label ="ՏԱՎՈԻՇԻ ՄԱՐԶ">
+						<option value="dilijan">ԴԻԼԻՋԱՆ</option>
+						<option value="ijevan">ԻՋԵՎԱՆ</option>
+						<option value="noyemberyan">ՆՈՅԵՄԲԵՐՅԱՆ</option>
+						<option value="berd">ԲԵՐԴ</option>
+					</optgroup>
+					<optgroup value="vayoc" label ="ՎԱՅՈՑ ՁՈՐԻ ՄԱՐԶ">
+						<option value="exegnadzor">ԵՂԵԳՆԱՁՈՐ</option>
+						<option value="jermuk">ՋԵՐՄՈՒԿ</option>
+						<option value="vayq">ՎԱՅՔ</option>
+					</optgroup>
+					<optgroup value="kotayk" label ="ԿՈՏԱՅՔԻ ՄԱՐԶ">
+						<option value="abovyan">ԱԲՈՎՅԱՆ</option>
+						<option value="hrazdan">ՀՐԱԶԴԱՆ</option>
+						<option value="exvard">ԵՂՎԱՐԴ</option>
+						<option value="hachn">ՆՈՐ ՀԱՃՆ</option>
+						<option value="charencavan">ՉԱՐԵՆՑԱՎԱՆ</option>
+					</optgroup>
+		        </select>
+			</div>
+			<div class="ct-2-3">
 			<input class="name" type="text" placeholder="օր. Ն. Կոստանդյանին">
 		</div>
 		<div class="content">
