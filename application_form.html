@@ -6,10 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 			input {
-				font-family: "Courier New", Courier, monospace;
-				font-size: 24px !important;
-				font-weight: 600;
+				font-family: "Courier New", Courier;
+				font-size: 12px !important;
+		   	/*  font-weight: 600;*/
     			background-color: #f0f0f0;
+				height: 30px;
 			}
 			@media print {
 				body {
@@ -34,9 +35,8 @@
 				}
 				input {
 					color: black !important;
-					font-family: "Courier New", Courier, monospace;
-					font-size: 32px !important;
-					font-weight: 600;
+					font-family: "Courier New", Courier;
+					font-size: 20px !important;
 				}
 				input::-webkit-input-placeholder { color:transparent; }
 				input:-moz-placeholder { color:transparent; } /* FF 4-18 */
@@ -86,13 +86,14 @@
 			.content {
 				justify-content: center;
 				flex-direction: column;
-				width: 53%;
+				width: 62%;
 				margin-bottom: 10%;
 			}
 			.content>div {
 				display: flex;
 				justify-content: center;
 				margin-top: 25px;
+				width: 100%;
 			}
 			.ct-3 {
 				font-size: 23px;
@@ -131,13 +132,13 @@
 				width: 68%;
 			}
 			.ct-6 .item .who {
-				width: 81%;
+				width: 82%;
 			}
 			.font {
 				font-size: 20px;
 			}
 			.ct-7>input {
-				width: 83%;
+				width: 86%;
 			}
 			.ct-9 {
 			    justify-content: space-between !important;
@@ -187,68 +188,187 @@
 			    text-align: center;
 			    cursor: pointer;
 			}
+			.ct-2-3 input {
+					width: 98%;
+			}
+			[placeholder] {
+				font-size: 24px;
+			}
+			.dimogh {
+			border-style: dashed;
+			border-width: 2px;
+			width: 32%;
+			margin: 2%;
+			padding: 1%;
+			height: 30%
+		}
+		.dimogh p {
+			margin: 1%;
+			font-size: 12px;
+		}
+		.stanogh {
+			border-style: dashed;
+			border-width: 2px;
+			width: 32%;
+			margin-left: 25%;
+			margin-top: 20%;
+			padding: 1%;
+			height: 30%;
+			float: right;
+		}
+		.stanogh p {
+			margin: 1%;
+			font-size: 12px;
+		}
+		.content-e {
+			margin: auto;
+			width: 820px;
+			height: 285px;
+			border: 12px solid transparent;
+			padding: 1%;
+			border-image: url(./images/border1.png);
+			border-image-slice: 9;
+			border-image-repeat:round;
+		}
+		div.dimogh > img {
+			position: absolute;
+			width: 33px;
+			height: 22px;
+			margin-top: 81px;
+			margin-left: 255px;
+			background-color: white;
+		}
+		div.stanogh > img {
+			position: absolute;
+			width: 33px;
+			height: 22px;
+			margin-top: 81px;
+			margin-left: 255px;
+			background-color: white;
+		}
+		.selects {
+			float: right;
+		}
+		.selects select {
+			width: 100%;
+			background-color: wheat;
+			height: 29px;
+			border-radius: 6px;
+		}
+		.selects select option {
+			font-size: 18px;
+		}
+		a {
+			text-decoration: none;
+		}
+		button {
+			width: 14.3%;
+			margin-top: 13%;
+			margin-bottom: 0.2%;
+			height: 34px;
+		}
+		button:hover {
+			background-color:  #ccc;
+		}
+		img {
+			width: 1%;
+			margin-left: -2%;
+			margin-top: 1%;
+		}
+		.multiselect .fullname {
+			display:none;
+
+		}
+		.select {
+			margin-bottom: 30%;
+		}
+
+		ul {list-style: none;padding: 0px;margin: 0px;}
+		  ul li {display: block;position: relative;float: left;border:1px solid #000}
+		  li ul {display: none;}
+		  ul li a {display: block;background: #000;padding: 5px 10px 5px 10px;text-decoration: none;
+				   white-space: nowrap;color: #fff;}
+		  ul li a:hover {background: #f00;}
+		  li:hover ul {display: block; position: absolute;}
+		  li:hover li {float: none;}
+		  li:hover a {background: #f00;}
+		  li:hover li a:hover {background: #000;}
+		  #drop-nav li ul li {border-top: 0px;}
 		</style>
 		<script type="text/javascript">
-				city= {
-					avan: "Անձնագրային և վիզաների վարչության Ավանի անձնագրային խմբի ղեկավար Աննա Պողոսյանին",
-					arabkir: "Անձնագրային և վիզաների վարչության Արաբկիրի անձնագրային բաժանմունքի ղեկավար Նատալի Կոստանդյանին",
-					davtashen: "Անձնագրային և վիզաների վարչության Դավթաշենի անձնագրային խմբի ղեկավար Ռոման Խալաթյանին",
-					erebuni: "Անձնագրային և վիզաների վարչության Էրեբունու անձնագրային խմբի ղեկավար Սյուզաննա Մանասյանին",
-					kentron: "Անձնագրային և վիզաների վարչության Կենտրոնի անձնագրային բաժանմունքի ղեկավար Անահիտ Վիրաբյանին",
-					malatia: "Անձնագրային և վիզաների վարչության Մալաթիայի անձնագրային բաժանմունքի ղեկավար Մխիթար Հովհաննիսյանին",
-					mashtoc: "Անձնագրային և վիզաների վարչության Մաշտոցի անձնագրային բաժանմունքի ղեկավար Մարինե Վարդանյանին",
-					marash: "Անձնագրային և վիզաների վարչության Մարաշի անձնագրային խմբի ղեկավար Լիլիթ Հովսեփյանին",
-					norq: "Անձնագրային և վիզաների վարչության Նոր Ներքի անձնագրային բաժանմունքի ղեկավար Վեներա Բադալյանին",
-					nubarashen: "Անձնագրային և վիզաների վարչության Նուբարաշենի անձնագրային խմբի ղեկավար Հայկանուշ Ուզունյանին",
-					charbax: "Անձնագրային և վիզաների վարչության Չարբախի անձնագրային խմբի ղեկավարին",
-					shengavit: "Անձնագրային և վիզաների վարչության Շենգավիթի անձնագրային բաժանմունքի ղեկավար Նաիրա Բարսեղյանին",
-					zeytun:	"Անձնագրային և վիզաների վարչության Քանաքեռ-Զեյթունի անձնագրային բաժանմունքի ղեկավար Նարինե Հայրապետյանին",
-					axuryan: "Անձնագրային և վիզաների վարչության Ախուրյանի անձնագրային բաժանմունքի ղեկավար Սվետլանա Բաղդասարյանին",
-					amasya: "Անձնագրային և վիզաների վարչության Ամասիայի անձնագրային խմբի ղեկավար Արփենիկ Համբարձումյանին",
-					ani: "Անձնագրային և վիզաների վարչության Անիի անձնագրային խմբի ղեկավար Արտակ Բարսեղյան",
-					ashocq: "Անձնագրային և վիզաների վարչության Աշոցքիի անձնագրային խմբի ղեկավար Գնել Պետրոսյան",
-					artik: "Անձնագրային և վիզաների վարչության Արթիկի անձնագրային բաժանմունքի ղեկավար Ռուզաննա Բաղդասարյան",
-					gyumri_k: "Անձնագրային և վիզաների վարչության Գյումրու «Կումայրի» անձնագրային բաժանմունքի ղեկավար Ջուլիետա Քալաշյանին",
-					gyumri_m: "Անձնագրային և վիզաների վարչության Գյումրու «Մուշ» անձնագրային բաժանմունքի ղեկավար Արթուր Վարդանյան",
-					ashtarak: "Անձնագրային և վիզաների վարչության Աշտարակի անձնագրային բաժանմունքի ղեկավար Մկրտիչ Մկրտչյանին",
-					aparan: "Անձնագրային և վիզաների վարչության Ապարանի անձնագրային խմբի ղեկավար Աննման Շահբազյան",
-					caxkahovit: "",
-					talin: "Անձնագրային և վիզաների վարչության Թալինի անձնագրային խմբի ղեկավար Առաքել Գրիգորյանին",
-					ararat:
-					artasht: "Անձնագրային և վիզաների վարչության Արտաշատի անձնագրային բաժանմունքի ղեկավար Էդիկ Ղազարյան",
-					masis: "Անձնագրային և վիզաների վարչության Մասիսի անձնագրային բաժանմունքի ղեկավար Վահագն Գրիգորյանին",
-					armavir: "Անձնագրային և վիզաների վարչության Արմավիրի անձնագրային բաժանմունքի ղեկավար Ռազմիկ Հակոբյանին",
-					baxramyan: "Անձնագրային և վիզաների վարչության Ապարանի անձնագրային խմբի ղեկավար Յուրիկ Գրիգորյանին",
-					ejmiacin: "Անձնագրային և վիզաների վարչության Էջմիածնի անձնագրային բաժանմունքի ղեկավար Պերճ Խաչատրյան",
-					mecamor: "Անձնագրային և վիզաների վարչության Մեծամորի անձնագրային խմբի ղեկավար Գոռ Գասպարյանին",
-					gavar: "Անձնագրային և վիզաների վարչության Գավառի անձնագրային բաժանմունքի ղեկավար Հասմիկ Մուսոյանին",
-					armavir: "Անձնագրային և վիզաների վարչության Արմավիրի անձնագրային բաժանմունքի ղեկավար Ռազմիկ Հակոբյանին",
-					chambarak: "Անձնագրային և վիզաների վարչության Ճամբարակի անձնագրային խմբի ղեկավար ամիլա Եգանյաին",
-					martuni: "Անձնագրային և վիզաների վարչության Մարտունու անձնագրային բաժանմունքի ղեկավար Սարիբեկ Մաթևոսյան",
-					sevan: "Անձնագրային և վիզաների վարչության Սևանի անձնագրային բաժանմունքի ղեկավար Կարինե Դավթյանին",
-					vardenis: "Անձնագրային և վիզաների վարչության Ճամբարակի անձնագրային խմբի առաջատար մասնագետ Գարիկ Երանոսյանին",
-					goris: "Անձնագրային և վիզաների վարչության Գորիսի անձնագրային բաժանմունքի ղեկավար Քնար Պողոսյանին",
-					kapan: "Անձնագրային և վիզաների վարչության Կապանի անձնագրային բաժանմունքի ղեկավար Արթուր Սարգսյանին",
-					mexri: "Անձնագրային և վիզաների վարչության Մեղրու անձնագրային խմբի ղեկավա Գրենիկ Ահարոնյանին",
-					sisian: "Անձնագրային և վիզաների վարչության Սիսիանի անձնագրային բաժանմունքի ղեկավար Գայանե Ալավերդյանին",
-					gugarq: "Անձնագրային և վիզաների վարչության Գուգարքի անձնագրային բաժանմունքի ղեկավար Ալվարդ Միսկարյանին",	
-					alaverdi:
-					spitak: "Անձնագրային և վիզաների վարչության Սպիտակի անձնագրային բաժանմունքի ղեկավար Գագիկ Սիսակյանին",
-					stepanavan: "Անձնագրային և վիզաների վարչության Ստեփանավանի անձնագրային խմբի առաջատար մասնագետ Գրիգոր Գրիգորյանին",
-					vanadzor: "Անձնագրային և վիզաների վարչության Վանաձորի անձնագրային բաժանմունքի պետ Արմեն Թումանյանին",
-					dilijan: "Անձնագրային և վիզաների վարչության Դիլիջանի անձնագրային խմբի ղեկավար Դավիթ Դավթյանին",
-					ijevan: "Անձնագրային և վիզաների վարչության Իջևանի անձնագրային բաժանմունքի ղեկավար Մեդորա Չապուխյան",
-					noyemberyan: "Անձնագրային և վիզաների վարչության Նոյեմբերյանի անձնագրային խմբի ղեկավար Հայկ Մամյանին",
-					berd:
-					exegnadzor: "Անձնագրային և վիզաների վարչության Եղեգնաձորի անձնագրային բաժանմունքի ղեկավար Վարդիթեր Հովհաննիսյանին",
-					jermuk: "Անձնագրային և վիզաների վարչության Ջերմուկի անձնագրային խմբի ղեկավար Կարեն Հովհաննիսյաին",
-					vayq: "Անձնագրային և վիզաների վարչության Վայքի անձնագրային խմբի ղեկավար Սևադա Մարգարյանին",
-					abovyan: 
-					hrazdan: "Անձնագրային և վիզաների վարչության Հրազդանի անձնագրային բաժանմունքի ղեկավար Միքայել Գրիգորյանին",
-					exvard:
-					hachn: "Անձնագրային և վիզաների վարչության Հաճնի անձնագրային բաժանմունքի ղեկավար Վահե Խաչատրյանին",
-					charencavan։ "Անձնագրային և վիզաների վարչության Չարենցավանիի անձնագրային խմբի ղեկավար Սերգեյ Պողոսյանին",
-			}
+				function alertname() {
+					var ci, ty;
+			  	    ci = document.getElementById("multiselect");
+   			   	    ty = ci.options[ci.selectedIndex].value;
+    			    return ty;
+				}
+				function selectedRegion() {
+					var region, city;
+					city = {
+						avan: "Անձնագրային և վիզաների վարչության Ավանի անձնագրային խմբի առաջատար մասնագետ Աննա Պողոսյանին",
+						arabkir: "Անձնագրային և վիզաների վարչության Արաբկիրի անձնագրային բաժանմունքի պետ Նատալի Կոստանդյանին",
+						davtashen: "Անձնագրային և վիզաների վարչության Դավթաշենի անձնագրային խմբի առաջատար մասնագետ Ռոման Խալաթյանին",
+						erebuni: "Անձնագրային և վիզաների վարչության Էրեբունու անձնագրային խմբի պետ Սյուզաննա Մանասյանին",
+						kentron: "Անձնագրային և վիզաների վարչության Կենտրոնի անձնագրային բաժանմունքի պետ Անահիտ Վիրաբյանին",
+						malatia: "Անձնագրային և վիզաների վարչության Մալաթիայի անձնագրային բաժանմունքի պետ Մխիթար Հովհաննիսյանին",
+						mashtoc: "Անձնագրային և վիզաների վարչության Մաշտոցի անձնագրային բաժանմունքի պետ Մարինե Վարդանյանին",
+						marash: "Անձնագրային և վիզաների վարչության Մարաշի անձնագրային խմբի առաջատար մասնագետ Լիլիթ Հովսեփյանին",
+						norq: "Անձնագրային և վիզաների վարչության Նոր Ներքի անձնագրային բաժանմունքի պետ Վեներա Բադալյանին",
+						nubarashen: "Անձնագրային և վիզաների վարչության Նուբարաշենի անձնագրային խմբի  Հայկանուշ Ուզունյանին",
+						charbax: "Անձնագրային և վիզաների վարչության Չարբախի անձնագրային խմբի առաջատար մասնագետ Արշակ Թարվերդյանին",
+						shengavit: "Անձնագրային և վիզաների վարչության Շենգավիթի անձնագրային բաժանմունքի պետ Նաիրա Բարսեղյանին",
+						qanaqer: "Անձնագրային և վիզաների վարչության Քանաքեռ-Զեյթունի անձնագրային բաժանմունքի պետ Նարինե Հայրապետյանին",
+						axuryan: "Անձնագրային և վիզաների վարչության Ախուրյանի անձնագրային բաժանմունքի պետ Սվետլանա Բաղդասարյանին",
+						amasia: "Անձնագրային և վիզաների վարչության Ամասիայի անձնագրային խմբի առաջատար մասնագետ Արփենիկ Համբարձումյանին",
+						ani: "Անձնագրային և վիզաների վարչության Անիի անձնագրային խմբի առաջատար մասնագետ Արտակ Բարսեղյան",
+						ashocq: "Անձնագրային և վիզաների վարչության Աշոցքիի անձնագրային խմբի առաջատար մասնագետ Գնել Պետրոսյան",
+						artik: "Անձնագրային և վիզաների վարչության Արթիկի անձնագրային բաժանմունքի պետ Ռուզաննա Բաղդասարյան",
+						gyumri_k: "Անձնագրային և վիզաների վարչության Գյումրու «Կումայրի» անձնագրային բաժանմունքի պետ Ջուլիետա Քալաշյանին",
+						gyumri_m: "Անձնագրային և վիզաների վարչության Գյումրու «Մուշ» անձնագրային բաժանմունքի պետ Արթուր Վարդանյան",
+						ashtarak: "Անձնագրային և վիզաների վարչության Աշտարակի անձնագրային բաժանմունքի պետ Մկրտիչ Մկրտչյանին",
+						aparan: "Անձնագրային և վիզաների վարչության Ապարանի անձնագրային խմբի առաջատար մասնագետ Աննման Շահբազյան",
+						caxkahovit: "Անձնագրային և վիզաների վարչության Արագածի անձնագրային խմբի առաջատար մասնագետ Դոնարա Մինասյանին",
+						talin: "Անձնագրային և վիզաների վարչության Թալինի անձնագրային խմբի առաջատար մասնագետ Առաքել Գրիգորյանին",
+						ararat: "Անձնագրային և վիզաների վարչության Արարատի անձնագրային խմբի պետ Զոհրաբ Մահլամյանին",
+						vedi: "Անձնագրային և վիզաների վարչության Արարատի անձնագրային բաժանմունքի պետ Զոհրաբ Մահլամյանին",
+						artasht: "Անձնագրային և վիզաների վարչության Արտաշատի անձնագրային բաժանմունքի պետ Էդիկ Ղազարյան",
+						masis: "Անձնագրային և վիզաների վարչության Մասիսի անձնագրային բաժանմունքի պետ Վահագն Գրիգորյանին",
+						armavir: "Անձնագրային և վիզաների վարչության Արմավիրի անձնագրային բաժանմունքի պետ Ռազմիկ Հակոբյանին",
+						baxramyan: "Անձնագրային և վիզաների վարչության Ապարանի անձնագրային խմբի առաջատար մասնագետ Յուրիկ Գրիգորյանին",
+						ejmiacin: "Անձնագրային և վիզաների վարչության Էջմիածնի անձնագրային բաժանմունքի պետ Պերճ Խաչատրյան",
+						mecamor: "Անձնագրային և վիզաների վարչության Մեծամորի անձնագրային խմբի առաջատար մասնագետ Գոռ Գասպարյանին",
+						gavar: "Անձնագրային և վիզաների վարչության Գավառի անձնագրային բաժանմունքի պետ Սերգեյ Լազարյանին",
+						armavir: "Անձնագրային և վիզաների վարչության Արմավիրի անձնագրային բաժանմունքի պետ Ռազմիկ Հակոբյանին",
+						chambarak: "Անձնագրային և վիզաների վարչության Ճամբարակի անձնագրային խմբի առաջատար մասնագետ Կամիլա Եգանյաին",
+						martuni: "Անձնագրային և վիզաների վարչության Մարտունու անձնագրային բաժանմունքի պետ Սարիբեկ Մաթևոսյան",
+						sevan: "Անձնագրային և վիզաների վարչության Սևանի անձնագրային բաժանմունքի պետի պաշտոնակատար Կարինե Դավթյանին",
+						vardenis: "Անձնագրային և վիզաների վարչության Ճամբարակի անձնագրային խմբի առաջատար մասնագետ Գարիկ Երանոսյանին",
+						goris: "Անձնագրային և վիզաների վարչության Գորիսի անձնագրային բաժանմունքի պետ Քնար Պողոսյանին",
+						kapan: "Անձնագրային և վիզաների վարչության Կապանի անձնագրային բաժանմունքի պետ Արթուր Սարգսյանին",
+						mexri: "Անձնագրային և վիզաների վարչության Մեղրու անձնագրային խմբի առաջատար մասնագետ Գրենիկ Ահարոնյանին",
+						sisian: "Անձնագրային և վիզաների վարչության Սիսիանի անձնագրային բաժանմունքի պետ Գայանե Ալավերդյանին",
+						gugarq: "Անձնագրային և վիզաների վարչության Գուգարքի անձնագրային բաժանմունքի առաջատար մասնագետ Ալվարդ Միսկարյանին",	
+						alaverdi: "Անձնագրային և վիզաների վարչության Թումանյանի անձնագրային բաժանմունքի պետ Գևորգ Հակոբյանին",
+						spitak: "Անձնագրային և վիզաների վարչության Սպիտակի անձնագրային բաժանմունքի պետ Գագիկ Սիսակյանին",
+						stepanavan: "Անձնագրային և վիզաների վարչության Ստեփանավանի անձնագրային խմբի առաջատար մասնագետ Գրիգոր Գրիգորյանին",
+						vanadzor: "Անձնագրային և վիզաների վարչության Վանաձորի անձնագրային բաժանմունքի պետ Արմեն Թումանյանին",
+						dilijan: "Անձնագրային և վիզաների վարչության Դիլիջանի անձնագրային խմբի առաջատար մասնագետ Դավիթ Դավթյանին",
+						ijevan: "Անձնագրային և վիզաների վարչության Իջևանի անձնագրային բաժանմունքի պետ Մեդորա Չապուխյան",
+						noyemberyan: "Անձնագրային և վիզաների վարչության Նոյեմբերյանի անձնագրային խմբի առաջատար մասնագետ Հայկ Մամյանին",
+						berd: "Անձնագրային և վիզաների վարչության Տավուշի անձնագրային խմբի առաջատար մասնագետ Սվետլանա Քարտաշյանին",
+						exegnadzor: "Անձնագրային և վիզաների վարչության Եղեգնաձորի անձնագրային բաժանմունքի պետ Վարդիթեր Հովհաննիսյանին",
+						jermuk: "Անձնագրային և վիզաների վարչության Ջերմուկի անձնագրային խմբի առաջատար մասնագետ Կարեն Հովհաննիսյաին",
+						vayq: "Անձնագրային և վիզաների վարչության Վայքի անձնագրային խմբի առաջատար մասնագետ Սևադա Մարգարյանին",
+						abovyan: "Անձնագրային և վիզաների վարչության Կոտայքի անձնագրային բաժանմունքի պետ Արա Ավանեսյանին",
+						hrazdan: "Անձնագրային և վիզաների վարչության Հրազդանի անձնագրային բաժանմունքի պետ Միքայել Գրիգորյանին",
+						exvard: "Անձնագրային և վիզաների վարչության Նաիրիի անձնագրային բաժանմունքի պետ վետիս Սարգսյանին",
+						hachn: "Անձնագրային և վիզաների վարչության Հաճնի անձնագրային բաժանմունքի պետ Վահե Խաչատրյանին",
+						charencavan: "Անձնագրային և վիզաների վարչության Չարենցավանի անձնագրային խմբի առաջատար մասնագետ Սերգեյ Պողոսյանին"
+					}
+					region = alertname();
+					document.getElementById("address").value = city[region];
+				}
+
 			(function() {
 				window.onload = function() {
 					var inputs = document.getElementsByTagName('input');
@@ -309,13 +429,13 @@
 			</div>
 		</div>
 		<div class="ct-2">ՀՀ ոստիկանության անձնագրային և վիզաների վարչություն</div>
-			<div class="ct-2-2"> 
-				<select id="multiselect" onchange="selectedRegion();">
-			    	<optgroup value="erevan" label ="ԵՐԵՎԱՆ">
+			<div class="ct-2-2" > 
+				<select onchange="selectedRegion();" id="multiselect">
+					<optgroup value="erevan" label ="ԵՐԵՎԱՆ">
 						<option value="avan">ԱՎԱՆ</option>
 						<option value="arabkir">ԱՐԱԲԿԻՐ</option>
-						<option  value="davtashen">ԴԱՎԹԱՇԵՆ</option>
-						<option  value="erebuni">ԷՐԵԲՈՒՆԻ</option>
+						<option value="davtashen">ԴԱՎԹԱՇԵՆ</option>
+						<option value="erebuni">ԷՐԵԲՈՒՆԻ</option>
 						<option value="kentron">ԿԵՆՏՐՈՆ</option>
 						<option value="malatia"> ՄԱԼԱԹԻԱ</option>
 						<option value="mashtoc">ՄԱՇՏՈՑ</option>
@@ -336,42 +456,42 @@
 						<option value="gyumri_m">ԳՅՈՒՄՐՈՒ «ՄՈՒՇ»</option>
 					</optgroup>
 					<optgroup value="aragacotn" label ="ԱՐԱԳԱՑՈՏՆԻ ՄԱՐԶ">
-					<option value="ashtarak"> ԱՇՏԱՐԱԿ</option>
-					<option value="aparan">ԱՊԱՐԱՆ</option>
-					<option value="caxkahovit">ԾԱՂԿԱՀՈՎԻՏ</option>
-					<option value="talin">ԹԱԼԻՆ</option>
-				</optgroup>
-			    <optgroup value="ararat" label ="ԱՐԱՐԱՏԻ ՄԱՐԶ">
-					<option value="ararat">ԱՐԱՐԱՏ</oiption>
-					<option value="artashat">ԱՐՏԱՇԱՏ</oiption>
-					<option value="masis">ՄԱՍԻՍ</oiption>
-				</optgroup>
-				<optgroup value="armavir" label ="ԱՐՄԱՎԻՐԻ ՄԱՐԶ">
-					<option value="armavir">ԱՐՄԱՎԻՐ</option>
-					<option value="baxramyan">ԲԱՂՐԱՄՅԱՆ</option>
-					<option value="ejmiacin">ԷՋՄԻԱԾՆ</option>
-					<option value="mecamor">ՄԵԾԱՄՈՐ</option>
-               	  </optgroup>
-				  <optgroup value="gexarquniq" label ="ԳԵՂԱՐՔՈՒՆԻՔԻ ՄԱՐԶ">
-					   <option value="gavar">ԳԱՎԱՌ</option>
-					   <option value="armavir">ԱՐՄԱՎԻՐ</option>
-					   <option value="chambarak">ՃԱՄԲԱՐԱԿ</option>
-					   <option value="martuni">ՄԱՐՏՈՒՆԻ</option>
-					   <option value="sevan">ՍԵՎԱՆ</option>
-					   <option value="vardenis">ՎԱՐԴԵՆԻՍ</option>
-			       </optgroup>
-				   <optgroup value="syuniq" label ="ՍՅՈՒՆԻՔԻ ՄԱՐԶ">
-					   <option value="goris">ԳՈՐԻՍ</option>
-				       <option value="kapan">ԿԱՊԱՆ</option>	
-					   <option value="mexri">ՄԵՂՐԻ</option>
-					   <option value="sisian">ՍԻՍԻԱՆ</option>
-				   </optgroup>
-				   <optgroup value="lori" label ="ԼՈՌՈԻ ՄԱՐԶ">
-					   <option value="gugarq">ԳՈՒԳԱՐՔ</option>
-					   <option value="alaverdi">ԱԼԱՎԵՐԴԻ</option>
-					   <option value="spitak">ՍՊԻՏԱԿ</option>
-					   <option value="stepanavan">ՍՏԵՓԱՆԱՎԱՆ</option>
-					   <option value="vanadzor">ՎԱՆԱՁՈՐ</option>
+						<option value="ashtarak"> ԱՇՏԱՐԱԿ</option>
+						<option value="aparan">ԱՊԱՐԱՆ</option>
+						<option value="caxkahovit">ԾԱՂԿԱՀՈՎԻՏ</option>
+						<option value="talin">ԹԱԼԻՆ</option>
+					</optgroup>
+					<optgroup value="ararat" label ="ԱՐԱՐԱՏԻ ՄԱՐԶ">
+						<option value="ararat">ԱՐԱՐԱՏ</oiption>
+						<option value="artashat">ԱՐՏԱՇԱՏ</oiption>
+						<option value="masis">ՄԱՍԻՍ</oiption>
+						<option value="vedi">ՎԵԴԻ</oiption>
+					</optgroup>
+					<optgroup value="armavir" label ="ԱՐՄԱՎԻՐԻ ՄԱՐԶ">
+						<option value="armavir">ԱՐՄԱՎԻՐ</option>
+						<option value="baxramyan">ԲԱՂՐԱՄՅԱՆ</option>
+						<option value="ejmiacin">ԷՋՄԻԱԾՆ</option>
+						<option value="mecamor">ՄԵԾԱՄՈՐ</option>
+					</optgroup>
+					<optgroup value="gexarquniq" label ="ԳԵՂԱՐՔՈՒՆԻՔԻ ՄԱՐԶ">
+					    <option value="gavar">ԳԱՎԱՌ</option>
+					    <option value="chambarak">ՃԱՄԲԱՐԱԿ</option>
+					    <option value="martuni">ՄԱՐՏՈՒՆԻ</option>
+					    <option value="sevan">ՍԵՎԱՆ</option>
+					    <option value="vardenis">ՎԱՐԴԵՆԻՍ</option>
+					</optgroup>
+					<optgroup value="syuniq" label ="ՍՅՈՒՆԻՔԻ ՄԱՐԶ">
+						<option value="goris">ԳՈՐԻՍ</option>
+					    <option value="kapan">ԿԱՊԱՆ</option>	
+					    <option value="mexri">ՄԵՂՐԻ</option>
+					    <option value="sisian">ՍԻՍԻԱՆ</option>
+					</optgroup>
+					<optgroup value="lori" label ="ԼՈՌՈԻ ՄԱՐԶ">
+						<option value="gugarq">ԳՈՒԳԱՐՔ</option>
+					    <option value="alaverdi">ԱԼԱՎԵՐԴԻ</option>
+					    <option value="spitak">ՍՊԻՏԱԿ</option>
+					    <option value="stepanavan">ՍՏԵՓԱՆԱՎԱՆ</option>
+					    <option value="vanadzor">ՎԱՆԱՁՈՐ</option>
 					</optgroup>
 					<optgroup value="tavush" label ="ՏԱՎՈԻՇԻ ՄԱՐԶ">
 						<option value="dilijan">ԴԻԼԻՋԱՆ</option>
@@ -391,12 +511,12 @@
 						<option value="hachn">ՆՈՐ ՀԱՃՆ</option>
 						<option value="charencavan">ՉԱՐԵՆՑԱՎԱՆ</option>
 					</optgroup>
-		        </select>
+				</select>
 			</div>
 			<div class="ct-2-3">
-			<input class="name" type="text" placeholder="օր. Ն. Կոստանդյանին">
-		</div>
-		<div class="content">
+				<input class="name" id="address" type="text" placeholder="օր. Ն. Կոստանդյանին">
+			</div>
+			<div class="content">
 			<div class="ct-3">ԴԻՄՈՒՄ</div>
 			<div class="ct-4">ԸՆՏՐՈՂՆԵՐԻ ՑՈՒՑԱԿՈՒՄ ԸՆԴԳՐԿՎԵԼՈՒ</div>
 			<div class="ct-5">
@@ -445,5 +565,17 @@
 			<div class="ct-10">Դիմումի ձևը տրամադրում է լիազոր մարմինը։</div>
 		</div>
 		<div class="print">Տպել</div>
-	
- </body></html>
+		<div class="content-e" style="page-break-before:always" />
+            <div class="dimogh">
+                <img src="./images/cut.png">
+                <p>ԱՐՄԻՆԵ ԳՐԻԳՈՐՅԱՆ,ԵՐԵՎԱՆ ,ԳԱՐԵԳԻՆ ՆժԴԵՀԻ 20/14</p>
+            </div>
+            <div class="stanogh">
+                <img src="./images/cut.png">
+                <p id="adress">ԱՆՁՆԱԳՐԱՅԻՆ ԵՎ ՎԻԶԱՆԵՐԻ ՎԱՐՉՈՒԹՅԱՆ ԵՎ ՆՐԱ ՍՏՈՐԱԲԱԺԱՆՈՒՄՆԵՐԻ ՀԱՍՑԵ և ՀԵՌԱԽՈՍ</p>
+            </div>
+        </div>
+        <div class="select">
+
+	</body>
+</html>
