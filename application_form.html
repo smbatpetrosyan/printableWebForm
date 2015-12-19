@@ -1,171 +1,170 @@
 <!DOCTYPE html>
-<!-- saved from url=(0102)https://781c56338c22b06d4dd96ee0d78f8b1b9138db5a-www.googledrive.com/host/0B1uAYr8tk9j9bk54VjB3LXIteFk -->
-<html lang="hy">
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8">
         <title>Դիմում</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="./css/main.css" />
-        <link rel="stylesheet" type="text/css" href="./css/print.css" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/print.css" />
         <script src="./js/main.js"></script>
         <script src="./js/json.js"></script>
     </head>
     <body>
-        <div class="ct-1">
-            <div class="item">
-                <div>Հավելված N 1</div>
-                <div>ՀՀ կենտրոնական ընտրական</div>
-                <div>հանձնաժողովի</div>
-                <div>2011 թ. հունվարի 30-ի</div>
-                <div>N 23-Ն որոշման</div>
-            </div>
-        </div>
-        <div class="ct-2">ՀՀ ոստիկանության անձնագրային և վիզաների վարչություն</div>
-            <div class="ct-2-2" > 
-                <select onchange="selectedRegion();" id="multiselect">
-                    <optgroup value="erevan" label ="ԵՐԵՎԱՆ">
-                        <option value="avan">ԱՎԱՆ</option>
-                        <option value="arabkir">ԱՐԱԲԿԻՐ</option>
-                        <option value="davtashen">ԴԱՎԹԱՇԵՆ</option>
-                        <option value="erebuni">ԷՐԵԲՈՒՆԻ</option>
-                        <option value="kentron">ԿԵՆՏՐՈՆ</option>
-                        <option value="malatia"> ՄԱԼԱԹԻԱ</option>
-                        <option value="mashtoc">ՄԱՇՏՈՑ</option>
-                        <option value="marash">ՄԱՐԱՇ</option>
-                        <option value="norq">ՆՈՐ ՆՈՐՔ</option>
-                        <option value="nubarashen">ՆՈՒԲԱՐԱՇԵՆ</option>
-                        <option value="shengavit">ՇԵՆԳԱՎԻԹ</option>
-                        <option value="charbax">ՉԱՐԲԱԽ</option>
-                        <option value="qanaqer">ՔԱՆԱՔԵՌ-ԶԵՅԹՈՒՆ</option>
-                    </optgroup>
-                    <optgroup value="shirak" label ="ՇԻՐԱԿԻ ՄԱՐԶ">
-                        <option value="axuryan">ԱԽՈՒՐՅԱՆ</option>
-                        <option value="amasia">ԱՄԱՍԻԱ</option>
-                        <option value="ani">ԱՆԻ</option>
-                        <option value="ashocq">ԱՇՈՑՔ</option>
-                        <option value="artik">ԱՐԹԻԿ</option>
-                        <option value="gyumri_k">ԳՅՈՒՄՐՈՒ «ԿՈՒՄԱՅՐԻ»</option>
-                        <option value="gyumri_m">ԳՅՈՒՄՐՈՒ «ՄՈՒՇ»</option>
-                    </optgroup>
-                    <optgroup value="aragacotn" label ="ԱՐԱԳԱՑՈՏՆԻ ՄԱՐԶ">
-                        <option value="ashtarak"> ԱՇՏԱՐԱԿ</option>
-                        <option value="aparan">ԱՊԱՐԱՆ</option>
-                        <option value="caxkahovit">ԾԱՂԿԱՀՈՎԻՏ</option>
-                        <option value="talin">ԹԱԼԻՆ</option>
-                    </optgroup>
-                    <optgroup value="ararat" label ="ԱՐԱՐԱՏԻ ՄԱՐԶ">
-                        <option value="ararat">ԱՐԱՐԱՏ</oiption>
-                        <option value="artashat">ԱՐՏԱՇԱՏ</oiption>
-                        <option value="masis">ՄԱՍԻՍ</oiption>
-                        <option value="vedi">ՎԵԴԻ</oiption>
-                    </optgroup>
-                    <optgroup value="armavir" label ="ԱՐՄԱՎԻՐԻ ՄԱՐԶ">
-                        <option value="armavir">ԱՐՄԱՎԻՐ</option>
-                        <option value="baxramyan">ԲԱՂՐԱՄՅԱՆ</option>
-                        <option value="ejmiacin">ԷՋՄԻԱԾՆ</option>
-                        <option value="mecamor">ՄԵԾԱՄՈՐ</option>
-                    </optgroup>
-                    <optgroup value="gexarquniq" label ="ԳԵՂԱՐՔՈՒՆԻՔԻ ՄԱՐԶ">
-                        <option value="gavar">ԳԱՎԱՌ</option>
-                        <option value="chambarak">ՃԱՄԲԱՐԱԿ</option>
-                        <option value="martuni">ՄԱՐՏՈՒՆԻ</option>
-                        <option value="sevan">ՍԵՎԱՆ</option>
-                        <option value="vardenis">ՎԱՐԴԵՆԻՍ</option>
-                    </optgroup>
-                    <optgroup value="syuniq" label ="ՍՅՈՒՆԻՔԻ ՄԱՐԶ">
-                        <option value="goris">ԳՈՐԻՍ</option>
-                        <option value="kapan">ԿԱՊԱՆ</option>
-                        <option value="mexri">ՄԵՂՐԻ</option>
-                        <option value="sisian">ՍԻՍԻԱՆ</option>
-                    </optgroup>
-                    <optgroup value="lori" label ="ԼՈՌՈԻ ՄԱՐԶ">
-                        <option value="gugarq">ԳՈՒԳԱՐՔ</option>
-                        <option value="alaverdi">ԱԼԱՎԵՐԴԻ</option>
-                        <option value="spitak">ՍՊԻՏԱԿ</option>
-                        <option value="stepanavan">ՍՏԵՓԱՆԱՎԱՆ</option>
-                        <option value="vanadzor">ՎԱՆԱՁՈՐ</option>
-                    </optgroup>
-                    <optgroup value="tavush" label ="ՏԱՎՈԻՇԻ ՄԱՐԶ">
-                        <option value="dilijan">ԴԻԼԻՋԱՆ</option>
-                        <option value="ijevan">ԻՋԵՎԱՆ</option>
-                        <option value="noyemberyan">ՆՈՅԵՄԲԵՐՅԱՆ</option>
-                        <option value="berd">ԲԵՐԴ</option>
-                    </optgroup>
-                    <optgroup value="vayoc" label ="ՎԱՅՈՑ ՁՈՐԻ ՄԱՐԶ">
-                        <option value="exegnadzor">ԵՂԵԳՆԱՁՈՐ</option>
-                        <option value="jermuk">ՋԵՐՄՈՒԿ</option>
-                        <option value="vayq">ՎԱՅՔ</option>
-                    </optgroup>
-                    <optgroup value="kotayk" label ="ԿՈՏԱՅՔԻ ՄԱՐԶ">
-                        <option value="abovyan">ԱԲՈՎՅԱՆ</option>
-                        <option value="hrazdan">ՀՐԱԶԴԱՆ</option>
-                        <option value="exvard">ԵՂՎԱՐԴ</option>
-                        <option value="hachn">ՆՈՐ ՀԱՃՆ</option>
-                        <option value="charencavan">ՉԱՐԵՆՑԱՎԱՆ</option>
-                    </optgroup>
-                </select>
-            </div>
-            <div class="ct-2-3">
-                <textarea rows="3" class="textarea-size" id="address" placeholder="օր. Ն. Կոստանդյանին"></textarea>
-            </div>
-            <div class="content">
-            <div class="ct-3">ԴԻՄՈՒՄ</div>
-            <div class="ct-4">ԸՆՏՐՈՂՆԵՐԻ ՑՈՒՑԱԿՈՒՄ ԸՆԴԳՐԿՎԵԼՈՒ</div>
-            <div class="ct-5">
-                <span>Ես՝</span>
-                <input class="name" type="text" placeholder="օր. Պողոս Պողոսի Պողոսյան">
-                <span class="undertext">(անուն, հայրանուն, ազգանուն)</span>
-            </div>
-            <div class="ct-6">
+        <div class="content">
+            <div class="first-proem">
                 <div class="item">
-                    <span>Անձնագիր՝</span>
-                    <input class="passport" type="text" placeholder="օր. AE05421212">
-                    <span class="font">,</span>
-                    <span class="undertext">(սերիա, համար)</span>
+                    <div>Հավելված N 1</div>
+                    <div>ՀՀ կենտրոնական ընտրական</div>
+                    <div>հանձնաժողովի</div>
+                    <div>2011 թ. հունվարի 30-ի</div>
+                    <div>N 23-Ն որոշման</div>
                 </div>
-                <div class="item">
-                    <span>տրված՝</span>
-                    <input class="who" type="text" placeholder="օր. 12.05.2014, 070">
-                    <span class="undertext">(ամսաթիվ և ում կողմից)</span>
+                <div class="second-proem">
+                    <p>ՀՀ ոստիկանության անձնագրային և վիզաների վարչություն</p>
+                </div>
+                <div class="regions">
+                    <select id="allRegions">
+                        <optgroup label ="ԵՐԵՎԱՆ">
+                            <option value="avan">ԱՎԱՆ</option>
+                            <option value="arabkir">ԱՐԱԲԿԻՐ</option>
+                            <option value="davtashen">ԴԱՎԹԱՇԵՆ</option>
+                            <option value="erebuni">ԷՐԵԲՈՒՆԻ</option>
+                            <option value="kentron">ԿԵՆՏՐՈՆ</option>
+                            <option value="malatia"> ՄԱԼԱԹԻԱ</option>
+                            <option value="mashtoc">ՄԱՇՏՈՑ</option>
+                            <option value="marash">ՄԱՐԱՇ</option>
+                            <option value="norq">ՆՈՐ ՆՈՐՔ</option>
+                            <option value="nubarashen">ՆՈՒԲԱՐԱՇԵՆ</option>
+                            <option value="shengavit">ՇԵՆԳԱՎԻԹ</option>
+                            <option value="charbax">ՉԱՐԲԱԽ</option>
+                            <option value="qanaqer">ՔԱՆԱՔԵՌ-ԶԵՅԹՈՒՆ</option>
+                        </optgroup>
+                        <optgroup label ="ՇԻՐԱԿԻ ՄԱՐԶ">
+                            <option value="axuryan">ԱԽՈՒՐՅԱՆ</option>
+                            <option value="amasia">ԱՄԱՍԻԱ</option>
+                            <option value="ani">ԱՆԻ</option>
+                            <option value="ashocq">ԱՇՈՑՔ</option>
+                            <option value="artik">ԱՐԹԻԿ</option>
+                            <option value="gyumri_k">ԳՅՈՒՄՐՈՒ «ԿՈՒՄԱՅՐԻ»</option>
+                            <option value="gyumri_m">ԳՅՈՒՄՐՈՒ «ՄՈՒՇ»</option>
+                        </optgroup>
+                        <optgroup label ="ԱՐԱԳԱՑՈՏՆԻ ՄԱՐԶ">
+                            <option value="ashtarak"> ԱՇՏԱՐԱԿ</option>
+                            <option value="aparan">ԱՊԱՐԱՆ</option>
+                            <option value="caxkahovit">ԾԱՂԿԱՀՈՎԻՏ</option>
+                            <option value="talin">ԹԱԼԻՆ</option>
+                        </optgroup>
+                        <optgroup label ="ԱՐԱՐԱՏԻ ՄԱՐԶ">
+                            <option value="ararat">ԱՐԱՐԱՏ</oiption>
+                            <option value="artashat">ԱՐՏԱՇԱՏ</oiption>
+                            <option value="masis">ՄԱՍԻՍ</oiption>
+                            <option value="vedi">ՎԵԴԻ</oiption>
+                        </optgroup>
+                        <optgroup label ="ԱՐՄԱՎԻՐԻ ՄԱՐԶ">
+                            <option value="armavir">ԱՐՄԱՎԻՐ</option>
+                            <option value="baxramyan">ԲԱՂՐԱՄՅԱՆ</option>
+                            <option value="ejmiacin">ԷՋՄԻԱԾՆ</option>
+                            <option value="mecamor">ՄԵԾԱՄՈՐ</option>
+                        </optgroup>
+                        <optgroup label ="ԳԵՂԱՐՔՈՒՆԻՔԻ ՄԱՐԶ">
+                            <option value="gavar">ԳԱՎԱՌ</option>
+                            <option value="chambarak">ՃԱՄԲԱՐԱԿ</option>
+                            <option value="martuni">ՄԱՐՏՈՒՆԻ</option>
+                            <option value="sevan">ՍԵՎԱՆ</option>
+                            <option value="vardenis">ՎԱՐԴԵՆԻՍ</option>
+                        </optgroup>
+                        <optgroup label ="ՍՅՈՒՆԻՔԻ ՄԱՐԶ">
+                            <option value="goris">ԳՈՐԻՍ</option>
+                            <option value="kapan">ԿԱՊԱՆ</option>
+                            <option value="mexri">ՄԵՂՐԻ</option>
+                            <option value="sisian">ՍԻՍԻԱՆ</option>
+                        </optgroup>
+                        <optgroup label ="ԼՈՌՈԻ ՄԱՐԶ">
+                            <option value="gugarq">ԳՈՒԳԱՐՔ</option>
+                            <option value="alaverdi">ԱԼԱՎԵՐԴԻ</option>
+                            <option value="spitak">ՍՊԻՏԱԿ</option>
+                            <option value="stepanavan">ՍՏԵՓԱՆԱՎԱՆ</option>
+                            <option value="vanadzor">ՎԱՆԱՁՈՐ</option>
+                        </optgroup>
+                        <optgroup label ="ՏԱՎՈԻՇԻ ՄԱՐԶ">
+                            <option value="dilijan">ԴԻԼԻՋԱՆ</option>
+                            <option value="ijevan">ԻՋԵՎԱՆ</option>
+                            <option value="noyemberyan">ՆՈՅԵՄԲԵՐՅԱՆ</option>
+                            <option value="berd">ԲԵՐԴ</option>
+                        </optgroup>
+                        <optgroup label ="ՎԱՅՈՑ ՁՈՐԻ ՄԱՐԶ">
+                            <option value="exegnadzor">ԵՂԵԳՆԱՁՈՐ</option>
+                            <option value="jermuk">ՋԵՐՄՈՒԿ</option>
+                            <option value="vayq">ՎԱՅՔ</option>
+                        </optgroup>
+                        <optgroup label ="ԿՈՏԱՅՔԻ ՄԱՐԶ">
+                            <option value="abovyan">ԱԲՈՎՅԱՆ</option>
+                            <option value="hrazdan">ՀՐԱԶԴԱՆ</option>
+                            <option value="exvard">ԵՂՎԱՐԴ</option>
+                            <option value="hachn">ՆՈՐ ՀԱՃՆ</option>
+                            <option value="charencavan">ՉԱՐԵՆՑԱՎԱՆ</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="third-proem">
+                    <textarea rows="3" class="textarea-size" id="assign" placeholder="օր. Ն. Կոստանդյանին"></textarea>
                 </div>
             </div>
-            <div class="ct-7">
-                <span>բնակվում եմ՝</span>
-                <input class="home" type="text" placeholder="օր. ք. Երևան, Ա. Խաչատրյան փող. շ. 55, բն. 11">
-                <span class="undertext">(բնակության վայր)</span>
-            </div>
-            <div class="ct-8">
-                և Հայաստանի Հանրապետության հաշվառում չունեմ։
-            </div>
-            <div class="ct-8">
-                Համապետական ընտրություններին մասնակցելու համար խնդրում եմ ինձ ընդգրկել իմ գտնվելու վայրի մոտակա ընտրական տեղամասի ընտրողների լրացուցիչ ցուցակում և այդ մասին տալ համապատասխան տեղեկանք։
-            </div>
-            <div class="ct-9">
-                <div class="item">
-                    <span>Դիմող՝</span>
-                    <div class="reporter"></div>
-                    <span class="undertext">ստորագրություն</span>
+            <div class="solicitation">
+                <div class="big-font">
+                    <p>ԴԻՄՈՒՄ</p>
                 </div>
-                <div class="item">
-                    <span class="font">«</span>
-                    <input class="day" type="text" maxlength="2" minlength="2">
-                    <span class="font">»</span>
-                    <input class="month" type="text">
-                    <span class="font">2015թ.</span>
+                <div class="second-big-font">ԸՆՏՐՈՂՆԵՐԻ ՑՈՒՑԱԿՈՒՄ ԸՆԴԳՐԿՎԵԼՈՒ</div>
+                <div class="declarer">
+                    <span>Ես՝</span>
+                    <input class="dec" type="text" placeholder="օր. Պողոս Պողոսի Պողոսյան">
+                    <span class="undertext">(անուն, հայրանուն, ազգանուն)</span>
                 </div>
+                <div class="passport">
+                    <div class="item">
+                        <span>Անձնագիր՝</span>
+                        <input type="text" placeholder="օր. AE05421212">,
+                        <span class="undertext">(սերիա, համար)</span>
+                    </div>
+                    <div class="item">
+                        <span>տրված՝</span>
+                        <input class="date" type="text" placeholder="օր. 12.05.2014, 070">
+                        <span class="undertext">(ամսաթիվ և ում կողմից)</span>
+                    </div>
+                </div>
+                <div class="location">
+                    <span>բնակվում եմ՝</span>
+                    <input type="text" placeholder="օր. ք. Երևան, Ա. Խաչատրյան փող. շ. 55, բն. 11">
+                    <span class="undertext">(բնակության վայր)</span>
+                </div>
+                <div class="general-inf">և Հայաստանի Հանրապետության հաշվառում չունեմ։</div>
+                <div class="general-inf">Համապետական ընտրություններին մասնակցելու համար խնդրում եմ ինձ ընդգրկել իմ գտնվելու վայրի մոտակա ընտրական տեղամասի ընտրողների լրացուցիչ ցուցակում և այդ մասին տալ համապատասխան տեղեկանք։</div>
+                <div class="signature">
+                    <div class="item">
+                        <span>Դիմող՝</span>
+                        <div class="reporter"></div>
+                        <span class="undertext">ստորագրություն</span>
+                    </div>
+                    <div class="item">
+                        <span>«</span>
+                        <input class="day" type="text" maxlength="2" minlength="2">
+                        <span>»</span>
+                        <input class="month" type="text">
+                        <span>2015թ.</span>
+                    </div>
+                </div>
+                <div class="form-request">Դիմումի ձևը տրամադրում է լիազոր մարմինը։</div>
             </div>
-            <div class="ct-10">Դիմումի ձևը տրամադրում է լիազոր մարմինը։</div>
-        </div>
-        <div class="print">Տպել</div>
-        <div class="content-e" style="page-break-before:always" />
-            <div class="dimogh">
-                <img src="./images/cut.png">
-                <p>ԱՐՄԻՆԵ ԳՐԻԳՈՐՅԱՆ,ԵՐԵՎԱՆ ,ԳԱՐԵԳԻՆ ՆժԴԵՀԻ 20/14</p>
-            </div>
-            <div class="stanogh">
-                <img src="./images/cut.png">
-                <p id="addresse">ԱՆՁՆԱԳՐԱՅԻՆ ԵՎ ՎԻԶԱՆԵՐԻ ՎԱՐՉՈՒԹՅԱՆ ԵՎ ՆՐԱ ՍՏՈՐԱԲԱԺԱՆՈՒՄՆԵՐԻ ՀԱՍՑԵ և ՀԵՌԱԽՈՍ</p>
+            <div class="print">Տպել</div>
+            <div class="cover" style="page-break-before:always" />
+                <div class="cover-border requestor">
+                    <img src="./images/cut.png" alt="Cut">
+                    <p>ԱՐՄԻՆԵ ԳՐԻԳՈՐՅԱՆ, ԵՐԵՎԱՆ, ԳԱՐԵԳԻՆ ՆժԴԵՀԻ 20/14</p>
+                </div>
+                <div class="cover-border signed">
+                    <img src="./images/cut.png" alt="Cut">
+                    <p id="address">ԱՆՁՆԱԳՐԱՅԻՆ ԵՎ ՎԻԶԱՆԵՐԻ ՎԱՐՉՈՒԹՅԱՆ ԵՎ ՆՐԱ ՍՏՈՐԱԲԱԺԱՆՈՒՄՆԵՐԻ ՀԱՍՑԵ և ՀԵՌԱԽՈՍ</p>
+                </div>
             </div>
         </div>
     </body>

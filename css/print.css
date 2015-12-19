@@ -1,36 +1,100 @@
+/*@page {
+  size: A4;
+  margin: 0;
+}*/
+
 @media print {
 
-    body {
-        width: 1748px;
+    body, page[size="A4"] {
         margin: 0;
-        font-size: 30px;
+        box-shadow: 0;
     }
-    body>div {
+
+    body {
+        width: 100%;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    body > div {
         width: 80% !important;
     }
-    .ct-1 .item>* {
-        font-size: 18px !important;
+
+    input,
+    select,
+    button,
+    textarea {
+        font-family: "sylfaen";
+        font-size: 12px;
     }
-    .content {
+
+    .first-proem .item >* {
+        font-size: 14px !important;
+    }
+
+    .solicitation {
         width: 75% !important;
     }
+
     div.print {
         display: none;
     }
+
     .undertext {
-        font-size: 22px !important;
+        font-size: 11px !important;
     }
+
     input {
         color: black !important;
-        font-family: "Courier New", Courier;
-        font-size: 20px !important;
     }
-    .content-e {
+
+    .cover {
         max-width: 820px !important;
     }
-    input::-webkit-input-placeholder { color:transparent; }
-    input:-moz-placeholder { color:transparent; } /* FF 4-18 */
-    input::-moz-placeholder { color:transparent; } /* FF 19+ */
-    input:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+    .textarea-size {
+        width: 500px;
+        margin-top: 20px;
+    }
+
+    .dec {
+        width: 93%;
+    }
+
+    .passport .item {
+        width: 45%;
+    }
+
+    .passport .item:first-child {
+        width: 40%;
+    }
+
+    .passport .item > input {
+        width: 64%;
+    }
+
+    .passport .item .date {
+        width: 79%;
+    }
+
+    .location > input {
+        width: 81%;
+    }
+
+    input::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    input:-moz-placeholder {
+        color: transparent;
+    }
+
+    input::-moz-placeholder {
+        color: transparent;
+    }
     
+    input:-ms-input-placeholder {
+        color: transparent;
+    }
+
 }

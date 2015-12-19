@@ -1,5 +1,5 @@
 var dataJson = {
-    getAddresse: function() {
+    getAddress: function() {
         return {
             avan: "0060, Երևան Ավան, Իսահակյան թաղամաս, 2 շենք",
             arabkir: "0014, Երևան Մամիկոնյանց փող., 1 շենք",

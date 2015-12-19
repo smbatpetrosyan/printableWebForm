@@ -1,24 +1,9 @@
-function alertname() {
-    var ci, ty;
-    ci = document.getElementById("multiselect");
-    ty = ci.options[ci.selectedIndex].value;
-    return ty;
-}
-function selectedRegion2(region) {
-    var addresse = dataJson.getAddresse();
-    document.getElementById("addresse").innerHTML = addresse[region];
-}
-function selectedRegion() {
-    var region, city = dataJson.getCity();
-    region = alertname();
-    document.getElementById("address").value = city[region];
-    selectedRegion2(region);
-}
 (function() {
     window.onload = function() {
-        var inputs = document.getElementsByTagName('input');
+        var inputs, element;
+        inputs = document.getElementsByTagName('input');
         setEvents(inputs);
-        var element = document.querySelector('.print');
+        element = document.querySelector('.print');
         element.onclick = function() {
             if (!isValid(inputs)) {
                 window.alert('Լրացրեք բոլոր դաշտերը բացառությամբ ստորագրություն դաշտի։');
@@ -26,10 +11,30 @@ function selectedRegion() {
                 window.print();
             }
         };
+        var getSelectedRegion = function() {
+            var allRegions,
+                selectedRegion;
+            allRegions = document.getElementById('allRegions');
+            selectedRegion = allRegions.options[allRegions.selectedIndex].value;
+            return selectedRegion;
+        }
+        var getRegionById = function(region) {
+            var address = dataJson.getAddress();
+            document.getElementById('address').innerHTML = address[region];
+        }
+        var selectedRegion = document.querySelector('#allRegions');
+        selectedRegion.onchange = function() {
+            var region, city;
+            region = getSelectedRegion();
+            getRegionById(region);
+            city = dataJson.getCity();
+            document.getElementById('assign').value = city[region];
+        };
     };
     var isValid = function(inputs) {
-        for(var i = 0; i < inputs.length; i++) {
-            var input = inputs[i];
+        var i, input;
+        for(i = 0; i < inputs.length; i++) {
+            input = inputs[i];
             validate(input);
             if (!input.value) {
                 return false;
@@ -38,8 +43,9 @@ function selectedRegion() {
         return true;
     };
     var setEvents = function(inputs) {
-        for(var i = 0; i < inputs.length; i++) {
-            var input = inputs[i];
+        var i, input;
+        for(i = 0; i < inputs.length; i++) {
+            input = inputs[i];
             input.onkeyup = function(event) {
                 validate(event.target);
             };
