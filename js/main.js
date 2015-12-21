@@ -20,20 +20,20 @@
         }
         var getRegionById = function(region) {
             var address = dataJson.getAddress();
-            document.getElementById('address').innerHTML = address[region];
+            document.getElementById('address').innerHTML = address[region].street + ' ' + address[region].postIndex;
         }
         var selectedRegion = document.querySelector('#allRegions');
         selectedRegion.onchange = function() {
             var region, city;
             region = getSelectedRegion();
             getRegionById(region);
-            city = dataJson.getCity();
-            document.getElementById('assign').value = city[region];
+            city = dataJson.getAddress();
+            document.getElementById('assign').value = city[region].recipient;
         };
     };
     var isValid = function(inputs) {
-        var i, input;
-        for(i = 0; i < inputs.length; i++) {
+        var i, input, inputsLength = inputs.length;
+        for (i = 0; i < inputsLength; i++) {
             input = inputs[i];
             validate(input);
             if (!input.value) {
@@ -43,8 +43,8 @@
         return true;
     };
     var setEvents = function(inputs) {
-        var i, input;
-        for(i = 0; i < inputs.length; i++) {
+        var i, input, inputsLength = inputs.length;
+        for (i = 0; i < inputsLength; i++) {
             input = inputs[i];
             input.onkeyup = function(event) {
                 validate(event.target);
