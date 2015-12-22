@@ -1,6 +1,7 @@
 (function() {
     window.onload = function() {
-        var inputs, element;
+        var inputs, element,
+            selectedRegion;
         inputs = document.getElementsByTagName('input');
         setEvents(inputs);
         element = document.querySelector('.print');
@@ -22,7 +23,7 @@
             var address = dataJson.getAddress();
             document.getElementById('address').innerHTML = address[region].street + ' ' + address[region].postIndex;
         }
-        var selectedRegion = document.querySelector('#allRegions');
+        selectedRegion = document.querySelector('#allRegions');
         selectedRegion.onchange = function() {
             var region, city;
             region = getSelectedRegion();

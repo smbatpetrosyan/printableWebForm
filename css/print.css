@@ -17,7 +17,7 @@
     }
 
     body > div {
-        width: 80% !important;
+        width: 100% !important;
     }
 
     input,
@@ -32,8 +32,10 @@
         font-size: 14px !important;
     }
 
+    /
     .solicitation {
-        width: 75% !important;
+        width: 100%.passport .item .date  !important;
+        justify-content: flex-end;
     }
 
     div.print {
@@ -62,19 +64,25 @@
     }
 
     .passport .item {
-        width: 45%;
+        width: 75%;
+
     }
 
     .passport .item:first-child {
-        width: 40%;
+        width: 35%;
     }
 
     .passport .item > input {
-        width: 64%;
+        width: 54%;
     }
 
     .passport .item .date {
-        width: 79%;
+        width: 80%;
+        margin-right: 0;
+    }
+
+    .passport {
+        min-width: 1000px !important;
     }
 
     .location > input {

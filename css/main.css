@@ -125,6 +125,8 @@ input {
 
 .signature .item {
     width: 35%;
+    margin-top: 3%;
+    margin-right: -9%; 
 }
 
 .signature .item:first-child {
@@ -140,12 +142,15 @@ input {
 
 .signature .item .day {
     margin-left: 0;
-    width: 10%;
+    width: 12%;
+    height: 30px;
+
 }
 
 .signature .item .month {
     margin-left: 0;
     width: 45%;
+    height: 30px;
 }
 
 .signature .item .year {
