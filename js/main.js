@@ -1,11 +1,13 @@
 (function() {
     window.onload = function() {
         var inputs, element,
-            selectedRegion;
+            selectedRegion,
+            declarer,
+            checkPassportSeria;
         inputs = document.getElementsByTagName('input');
         setEvents(inputs);
-        element = document.querySelector('.print');
-        element.onclick = function() {
+        printButton = document.querySelector('.print');
+        printButton.onclick = function() {
             if (!isValid(inputs)) {
                 window.alert('Լրացրեք բոլոր դաշտերը բացառությամբ ստորագրություն դաշտի։');
             } else {
@@ -31,12 +33,48 @@
             city = dataJson.getAddress();
             document.getElementById('assign').value = city[region].recipient;
         };
-    };
+        declarer = document.getElementById('declarer');
+        declarer.onkeyup = function() {
+            var value = document.getElementById('declarer').value;
+            checkSpace(value);
+        };
+        var checkSpace = function(value) {
+            value = value.trim();
+            var space = value.split(' ');
+            if (space.length === 3) {
+                declarer.style.borderColor = 'black';
+                declarer.style.color = 'black';
+                return true;
+            } else {
+                declarer.style.borderColor = 'red';
+                declarer.style.color = 'red';
+                return false;
+            }
+        };
+        checkPassportSeria = document.getElementById('seria');
+        checkPassportSeria.onkeyup = function() {
+            var regExp,
+                value,
+                inputValue;
+            regExp = /^[A-Z]{2}[0-9]{7}$/;
+            value = document.getElementById('seria').value;
+            value = value.trim();
+            inputValue = regExp.exec(value);
+            if (inputValue == null) {
+                checkPassportSeria.style.borderColor = 'red';
+                checkPassportSeria.style.color = 'red';
+                return false;
+            } else {
+                checkPassportSeria.style.borderColor = 'black';
+                checkPassportSeria.style.color = 'black';
+                return true;
+            }
+        };
+    }
     var isValid = function(inputs) {
         var i, input, inputsLength = inputs.length;
         for (i = 0; i < inputsLength; i++) {
             input = inputs[i];
-            validate(input);
             if (!input.value) {
                 return false;
             }
@@ -47,24 +85,9 @@
         var i, input, inputsLength = inputs.length;
         for (i = 0; i < inputsLength; i++) {
             input = inputs[i];
-            input.onkeyup = function(event) {
-                validate(event.target);
-            };
-            input.onkeydown = function(event) {
-                validate(event.target);
-            };
-            input.onchange = function(event) {
-                validate(event.target);
-            };
-            input.onfocus = function(event) {
-                validate(event.target);
-            };
-        }
-    };
-    var validate = function(element) {
-        element.style.color = 'black';
-        if (!element.value) {
-            element.style.color = 'red';
+            if (!input.value) {
+                input.style.color = 'red';
+            }
         }
     };
 })();
