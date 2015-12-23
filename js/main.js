@@ -8,7 +8,7 @@
         setEvents(inputs);
         printButton = document.querySelector('.print');
         printButton.onclick = function() {
-            if (!isValid(inputs)) {
+            if (!(isValid(inputs) && passportValidation() && checkSpace(document.getElementById('declarer').value))) {
                 window.alert('Լրացրեք բոլոր դաշտերը բացառությամբ ստորագրություն դաշտի։');
             } else {
                 window.print();
@@ -53,6 +53,9 @@
         };
         checkPassportSeria = document.getElementById('seria');
         checkPassportSeria.onkeyup = function() {
+            passportValidation();
+        };
+        var passportValidation = function() {
             var regExp,
                 value,
                 inputValue;
@@ -86,7 +89,7 @@
         for (i = 0; i < inputsLength; i++) {
             input = inputs[i];
             if (!input.value) {
-                input.style.color = 'red';
+                input.style.borderColor = 'red';
             }
         }
     };

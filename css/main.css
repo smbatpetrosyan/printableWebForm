@@ -8,17 +8,21 @@ body > div {
     width: 60%;
 }
 
-input,
 select,
-button,
-textarea, {
+button {
     font-family: "sylfaen";
-    font-size: 12p;
 }
 
 input {
-    background-color: #f0f0f0;
     height: 30px;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    background-color: #f0f0f0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px !important;
 }
 
 .first-proem .item >*,
@@ -250,7 +254,6 @@ button:hover {
 
 .textarea-size {
     float: right;
-    font-size: 14px !important;
     margin-top: 20px;
     width: 500px;
 }
