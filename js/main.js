@@ -37,6 +37,7 @@
         declarer = document.getElementById('declarer');
         declarer.onkeyup = function() {
             var value = document.getElementById('declarer').value;
+            document.getElementById('userName').innerHTML = value;
             checkSpace(value);
         };
         var checkSpace = function(value) {
@@ -76,12 +77,13 @@
         };
         location = document.getElementById('location');
         location.onkeyup = function() {
+            document.getElementById('userAddress').innerHTML = location.value;
             if (!location.value) {
                 location.style.borderColor = 'red';
             } else {
                 location.style.borderColor = 'black';
             }
-        }
+        };
     }
     var isValid = function(inputs) {
         var i, input, inputsLength = inputs.length;
