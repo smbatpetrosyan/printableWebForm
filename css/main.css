@@ -61,6 +61,10 @@ textarea {
     float: right;
 }
 
+.dashedLine {
+    width:100%;;
+}
+
 .solicitation > div {
     display: flex;
     justify-content: center;
@@ -70,6 +74,13 @@ textarea {
 
 .big-font {
     font-size: 24px;
+}
+
+hr {
+    border-style: dashed;
+    margin-left: 0px;
+    margin-top: 12%;
+    width: 96%;
 }
 
 .second-big-font {
@@ -238,6 +249,13 @@ div.signed > img {
     margin-left: 255px;
     margin-top: 81px;
     position: absolute;
+    width: 33px;
+}
+
+div.dashedLine > img {
+    float: right;
+    height: 22px;
+    margin-top: -1.8%;
     width: 33px;
 }
 
