@@ -110,8 +110,12 @@ input {
     padding-left: 40%;
 }
 
-.passport .item {
-    width: 55%;
+.passport .date-item {
+    width: 40%;
+}
+
+.passport .code-item {
+    width: 15%;
 }
 
 .passport .item:first-child {
@@ -126,8 +130,12 @@ input {
     width: 68%;
 }
 
-.passport .item .date {
-    width: 86%;
+.date > input {
+    width: 79%;
+}
+
+.passport-code > input {
+    width: 100%;
 }
 
 .location > input {
