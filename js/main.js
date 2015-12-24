@@ -31,7 +31,7 @@
             region = getSelectedRegion();
             getRegionById(region);
             city = dataJson.getAddress();
-            document.getElementById('assign').value = city[region].recipient;
+            document.getElementById('assign').value = city[region].recipient + '\n' + city[region].name;
         };
         declarer = document.getElementById('declarer');
         declarer.onkeyup = function() {
