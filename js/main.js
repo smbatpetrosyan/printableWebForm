@@ -3,7 +3,8 @@
         var inputs, element,
             selectedRegion,
             declarer,
-            checkPassportSeria;
+            checkPassportSeria,
+            location;
         inputs = document.getElementsByTagName('input');
         setEvents(inputs);
         printButton = document.querySelector('.print');
@@ -73,6 +74,14 @@
                 return true;
             }
         };
+        location = document.getElementById('location');
+        location.onkeyup = function() {
+            if (!location.value) {
+                location.style.borderColor = 'red';
+            } else {
+                location.style.borderColor = 'black';
+            }
+        }
     }
     var isValid = function(inputs) {
         var i, input, inputsLength = inputs.length;
