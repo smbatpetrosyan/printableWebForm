@@ -26,7 +26,7 @@
         }
         var getRegionById = function(region) {
             var address = dataJson.getAddress();
-            document.getElementById('address').innerHTML = address[region].street + ' ' + address[region].postIndex;
+            document.getElementById('address').innerHTML = address[region].street + ', ' + address[region].postIndex;
         }
         selectedRegion = document.querySelector('#allRegions');
         selectedRegion.onchange = function() {
