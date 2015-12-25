@@ -4,7 +4,9 @@
             selectedRegion,
             declarer,
             checkPassportSeria,
-            location;
+            location,
+            date,
+            code;
         inputs = document.getElementsByTagName('input');
         setEvents(inputs);
         printButton = document.querySelector('.print');
@@ -82,6 +84,40 @@
                 location.style.borderColor = 'red';
             } else {
                 location.style.borderColor = 'black';
+            }
+        };
+        date = document.getElementById('date');
+        date.onclick = function() {
+            date.type = 'date';
+            if (!date.value) {
+                date.style.borderColor = 'red';
+            }
+        };
+        date.onblur = function() {
+            date.type = 'text';
+        };
+        date.onchange = function() {
+            var dateValue,
+                dateMonth;
+            date.type = 'text';
+            dateValue = date.value.split('-');
+            dateMonth = dateValue[1];
+            date.style.borderColor = 'black';
+            date.value = dateValue[2] + '.' + dateMonth + '.' + dateValue[0];
+        };
+        code = document.getElementById('code')
+        code.onkeyup = function() {
+            var regExp,
+                value;
+            regExp = /^[0-9]{3}$/;
+            code.value = code.value.trim();
+            value = regExp.exec(code.value);
+            if (!value) {
+                code.style.borderColor = 'red';
+                code.style.color = 'red';
+            } else {
+                code.style.borderColor = 'black';
+                code.style.color = 'black';
             }
         };
     }
