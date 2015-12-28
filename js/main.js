@@ -6,7 +6,8 @@
             checkPassportSeria,
             location,
             date,
-            code;
+            code,
+            regionSelectVisible;
         inputs = document.getElementsByTagName('input');
         setEvents(inputs);
         printButton = document.querySelector('.print');
@@ -34,7 +35,7 @@
             region = getSelectedRegion();
             getRegionById(region);
             city = dataJson.getAddress();
-            document.getElementById('assign').value = city[region].recipient + '\n' + city[region].name;
+            document.getElementById('assign').innerHTML = city[region].recipient + '</br>' + city[region].name;
         };
         declarer = document.getElementById('declarer');
         declarer.onkeyup = function() {
@@ -119,6 +120,15 @@
                 code.style.borderColor = 'black';
                 code.style.color = 'black';
             }
+        };
+        regionSelectVisible = document.getElementById('assign');
+        regionSelectVisible.onclick = function() {
+            selectedRegion.style.display = 'flex';
+            regionSelectVisible.style.display = 'none';
+        };
+        selectedRegion.onclick = function() {
+            selectedRegion.style.display = 'none';
+            regionSelectVisible.style.display = 'flex';
         };
     }
     var isValid = function(inputs) {

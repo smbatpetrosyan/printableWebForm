@@ -26,9 +26,9 @@ textarea {
 }
 
 .first-proem .item >*,
-.second-proem .item,
-.textarea-size,
-.third-proem {
+.second-proem > p,
+.second-proem .assign,
+.second-proem .regions {
     justify-content: flex-end;
 }
 
@@ -42,23 +42,22 @@ textarea {
     font-size: 14px;
 }
 
-.second-proem {
-    float: right;
+.second-proem > p {
+    display: flex;
     margin-top: 5px;
 }
 
-.second-proem .item {
-    display: flex;
-}
-
-.regions {
-    height: 30px;
-    margin-top: 70px;
-    width: 100%;
-}
-
-.regions select {
+.second-proem .regions {
+    border-color: red;
     float: right;
+    margin-top: 10px;
+    width: 12%;
+    border-color: 
+}
+
+.second-proem .assign {
+    margin-top: -15px;
+    text-align: right;
 }
 
 .dashedLine {
@@ -80,7 +79,7 @@ hr {
     border-style: dashed;
     margin-left: 0px;
     margin-top: 12%;
-    width: 96%;
+    width: 98%;
 }
 
 .second-big-font {
@@ -276,10 +275,4 @@ button {
 
 button:hover {
     background-color: #ccc;
-}
-
-.textarea-size {
-    float: right;
-    margin-top: 20px;
-    width: 500px;
 }
