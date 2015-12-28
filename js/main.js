@@ -5,9 +5,12 @@
             declarer,
             checkPassportSeria,
             location,
-            date,
-            code,
-            regionSelectVisible;
+            date, code,
+            regionSelectVisible,
+            inputDay,
+            selectDay,
+            inputMonth,
+            selectMonth;
         inputs = document.getElementsByTagName('input');
         setEvents(inputs);
         printButton = document.querySelector('.print');
@@ -129,6 +132,30 @@
         selectedRegion.onclick = function() {
             selectedRegion.style.display = 'none';
             regionSelectVisible.style.display = 'flex';
+        };
+        inputDay = document.getElementById('input-day');
+        selectDay = document.getElementById('select-day');
+        inputDay.onclick = function() {
+            inputDay.style.display = 'none';
+            selectDay.style.display = 'inline';
+            inputDay.style.borderColor = 'black';
+        };
+        selectDay.onclick = function() {
+            selectDay.style.display = 'none';
+            inputDay.style.display = 'inline';
+            inputDay.value = selectDay.value;
+        };
+        inputMonth = document.getElementById('input-month');
+        selectMonth = document.getElementById('month');
+        inputMonth.onclick = function() {
+            inputMonth.style.display = 'none';
+            selectMonth.style.display = 'inline';
+        };
+        selectMonth.onclick = function() {
+            selectMonth.style.display = 'none';
+            inputMonth.style.display = 'inline';
+            inputMonth.value = selectMonth.value;
+            inputMonth.style.borderColor = 'black';
         };
     }
     var isValid = function(inputs) {

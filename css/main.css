@@ -146,9 +146,8 @@ input {
 }
 
 .signature .item {
-    width: 35%;
-    margin-top: 3%;
-    margin-right: -9%; 
+    margin-top: 24px;
+    width: 25%;
 }
 
 .signature .item:first-child {
@@ -162,21 +161,28 @@ input {
     width: 75%;
 }
 
-.signature .item .day {
-    margin-left: 0;
-    width: 12%;
-    height: 30px;
-
+.signature .item .day,
+.signature .item .month {
+    display: none;
 }
 
-.signature .item .month {
-    margin-left: 0;
-    width: 45%;
+.signature .item .day {
+    height: 32px;
+    width: 15%;
+}
+
+.signature .item .input-day {
     height: 30px;
+    width: 14%;
+}
+
+.signature .item .month ,
+.signature .item .input-month {
+    height: 30px;
+    width: 55%;
 }
 
 .signature .item .year {
-    margin-left: 0;
     width: 10%;
 }
 
