@@ -109,7 +109,7 @@
             date.style.borderColor = 'black';
             date.value = dateValue[2] + '.' + dateMonth + '.' + dateValue[0];
         };
-        code = document.getElementById('code')
+        code = document.getElementById('code');
         code.onkeyup = function() {
             var regExp,
                 value;
@@ -152,9 +152,27 @@
             selectMonth.style.display = 'inline';
         };
         selectMonth.onclick = function() {
+            var i, monthObj = {
+                january: 'հունվար',
+                february: 'փետրվար',
+                march: 'մարտ',
+                april: 'ապրիլ',
+                may: 'մայիս',
+                june: 'հունիս',
+                july: 'հուլիս',
+                august: 'օգոստոս',
+                september: 'սեպտեմբեր',
+                october: 'հոկտեմբեր',
+                november: 'նոյեմբեր',
+                december: 'դեկտեմբեր'
+            };
+            for (i in monthObj) {
+                if (selectMonth.value === i) {
+                    inputMonth.value = monthObj[i];
+                }
+            }
             selectMonth.style.display = 'none';
             inputMonth.style.display = 'inline';
-            inputMonth.value = selectMonth.value;
             inputMonth.style.borderColor = 'black';
         };
     }
