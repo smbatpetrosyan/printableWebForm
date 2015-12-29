@@ -1,5 +1,9 @@
+@page {
+    size: auto;
+    margin-bottom: 5mm;
+    margin-top: 5mm;
+}
 @media print {
-
     body, page[size="A4"] {
         margin: 0;
         box-shadow: 0;
@@ -18,7 +22,6 @@
     input,
     select,
     button {
-        font-family: "sylfaen";
         font-size: 12px;
     }
 
@@ -34,9 +37,6 @@
     .second-proem {
         float: right;
         margin-top: 5px;
-    }
-    .second-proem .assign {
-        margin-top: -15px;
     }
 
     .first-proem .item >* {
@@ -62,36 +62,15 @@
 
     .cover {
         max-width: 820px !important;
+        border: 2px,solid;
     }
 
-    .dec {
-        width: 93%;
+    .signature .item:first-child {
+        margin-top: 6% ! important;
     }
-
-    .passport .item {
-        width: 75%;
-
-    }
-
-    .passport .item:first-child {
-        width: 35%;
-    }
-
-    .passport .item > input {
-        width: 54%;
-    }
-
-    .passport .item .date {
-        width: 80%;
-        margin-right: 0;
-    }
-
-    .passport {
-        min-width: 1000px !important;
-    }
-
-    .location > input {
-        width: 81%;
+ 
+    .location {
+        width: 96% !important;
     }
 
     input::-webkit-input-placeholder {
@@ -109,5 +88,4 @@
     input:-ms-input-placeholder {
         color: transparent;
     }
-
 }

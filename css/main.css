@@ -1,6 +1,5 @@
 body {
     padding-bottom: 30px;
-    padding-top: 150px;
 }
 
 body > div {
@@ -21,7 +20,7 @@ input {
 input,
 textarea {
     background-color: #f0f0f0;
-    font-family: 'Sourse Sans Pro';
+    font-family: "Courier New", Courier, monospace;
     font-size: 24px !important;
 }
 
@@ -44,7 +43,7 @@ textarea {
 
 .second-proem > p {
     display: flex;
-    margin-top: 5px;
+    margin-top: 0;
 }
 
 .second-proem .regions {
@@ -77,7 +76,7 @@ textarea {
 hr {
     border-style: dashed;
     margin-left: 0px;
-    margin-top: 12%;
+    margin-top: 3%;
     width: 98%;
 }
 
@@ -106,6 +105,9 @@ input {
     font-size: 11px;
     margin-top: 5px;
     padding-left: 40%;
+}
+.passport {
+    width: 100%;
 }
 
 .passport .date-item {
@@ -146,11 +148,11 @@ input {
 
 .signature .item {
     margin-top: 24px;
-    width: 25%;
+    width: 35%;
 }
 
 .signature .item:first-child {
-    margin-top: 24px;
+    margin-top: 4%;
 }
 
 .signature .item .reporter {
@@ -179,6 +181,8 @@ input {
 .signature .item .input-month {
     height: 30px;
     width: 55%;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 600;
 }
 
 .signature .item .year {
@@ -226,13 +230,13 @@ input {
     border-image-slice: 9;
     height: 285px;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 3%;
     padding: 1%;
     width: 820px;
 }
 
 .cover-border {
-    border-style: dashed;
+    border-style: dotted;
     border-width: 2px;
     height: 30%;
     padding: 1%;
