@@ -100,12 +100,13 @@ input {
     width: 96%;
 }
 
-.undertext {
+.undertext,
+.under-text {
     display: flex;
     font-size: 11px;
-    margin-top: 5px;
-    padding-left: 40%;
+    justify-content: center;    
 }
+
 .passport {
     width: 100%;
 }
@@ -122,11 +123,21 @@ input {
     width: 45%;
 }
 
-.dec {
+.dec,
+.declarer .undertext {
     width: 96%;
 }
 
-.passport .item > input {
+.declarer .undertext,
+.passport .item .undertext,
+.location .undertext,
+.date .undertext {
+    float: right;
+    margin-top: 5px;
+}
+
+.passport .item > input,
+.passport .item .undertext {
     width: 68%;
 }
 
@@ -138,8 +149,23 @@ input {
     width: 98%;
 }
 
-.location > input {
+.location > input,
+.location .undertext {
     width: 88.6%;
+}
+
+.passport .item .undertext {
+    padding-right: 12%;
+}
+
+.under-text {
+    margin-top: 9px;
+    padding-left: 25%;
+}
+
+.date .undertext {
+    width: 80%;
+    padding-right: 4%;
 }
 
 .signature {
