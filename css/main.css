@@ -13,7 +13,6 @@ button {
 }
 
 input {
-    background-color: #f0f0f0;
     border: none;
     border-bottom: 1px solid;
     font-family: 'Source Sans Pro';
@@ -25,42 +24,52 @@ input {
     text-align: center;
 }
 
-.first-proem .item >*,
-.second-proem > p,
-.second-proem .assign,
-.second-proem .regions {
+.first-part .item >*,
+.second-part > p,
+.second-part .assign,
+.second-part .regions {
     justify-content: flex-end;
 }
 
-.first-proem .item {
+.first-part .item {
     display: flex;
     flex-direction: column;
 }
 
-.first-proem .item >* {
+.first-part .item >* {
     display: flex;
     font-size: 14px;
 }
 
-.second-proem > p {
+.second-part > p {
     display: flex;
     margin-top: 0;
 }
 
-.second-proem .regions {
+.second-part {
+    height: 80px;
+}
+
+.second-part .regions {
     border-color: red;
     float: right;
     margin-top: 10px;
-    width: 18%;
+    width: 20%;
 }
 
-.second-proem .assign {
-    margin-top: -15px;
+input,
+.second-part .assign {
+    background-color: #f0f0f0;
+}
+
+.second-part .assign {
     text-align: right;
+    margin-left: 49%;
+    margin-top: -15px;
 }
 
 .dashedLine {
-    width: 100%;;
+    width: 100%;
 }
 
 .solicitation > div {
