@@ -31,7 +31,7 @@
         var getRegionById = function(region) {
             var address = dataJson.getAddress();
             document.getElementById('address').innerHTML = address[region].street + ', ' + address[region].postIndex;
-        }
+        };
         selectedRegion = document.querySelector('#allRegions');
         selectedRegion.onchange = function() {
             var region, city;
@@ -43,7 +43,11 @@
         declarer = document.getElementById('declarer');
         declarer.onkeyup = function() {
             var value = document.getElementById('declarer').value;
-            document.getElementById('userName').innerHTML = value;
+            if (value) {
+                document.getElementById('userName').innerHTML = value;
+            } else {
+                document.getElementById('userName').innerHTML = 'ԱՐՄԻՆԵ ԳՐԻԳՈՐՅԱՆ';
+            }
             checkSpace(value);
         };
         var checkSpace = function(value) {
@@ -83,11 +87,12 @@
         };
         location = document.getElementById('location');
         location.onkeyup = function() {
-            document.getElementById('userAddress').innerHTML = location.value;
-            if (!location.value) {
-                location.style.borderColor = 'red';
-            } else {
+            if (location.value) {
+                document.getElementById('userAddress').innerHTML = location.value;
                 location.style.borderColor = 'black';
+            } else {
+                document.getElementById('userAddress').innerHTML = 'ԵՐԵՎԱՆ, ԳԱՐԵԳԻՆ ՆժԴԵՀԻ 20/14';
+                location.style.borderColor = 'red';
             }
         };
         date = document.getElementById('date');
