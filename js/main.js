@@ -10,12 +10,13 @@
             inputDay,
             selectDay,
             inputMonth,
-            selectMonth;
+            selectMonth,
+            dayAndMonth;
         inputs = document.getElementsByTagName('input');
         setEvents(inputs);
         printButton = document.querySelector('.print');
         printButton.onclick = function() {
-            if (!(isValid(inputs) && passportValidation() && checkSpace(document.getElementById('declarer').value) && dayMonthPrintValidation() && regionValidation())) {
+            if (!(isValid(inputs) && passportValidation() && checkSpace(document.getElementById('declarer').value) && regionValidation())) {
                 window.alert('Լրացրեք բոլոր դաշտերը բացառությամբ ստորագրություն դաշտի։');
             } else {
                 window.print();
@@ -145,60 +146,33 @@
             selectedRegion.style.display = 'none';
             regionSelectVisible.style.display = 'flex';
         };
-        inputDay = document.getElementById('input-day');
-        selectDay = document.getElementById('select-day');
-        inputDay.onclick = function() {
-            dayMonthPrintValidation();
-            inputDay.style.display = 'none';
-            selectDay.style.display = 'inline';
-        };
-        selectDay.onclick = function() {
-            selectDay.style.display = 'none';
-            inputDay.style.display = 'inline';
-            inputDay.style.borderColor = 'black';
-            inputDay.value = selectDay.value;
-        };
-        inputMonth = document.getElementById('input-month');
-        selectMonth = document.getElementById('month');
-        var dayMonthPrintValidation = function() {
-            if (!inputDay.value || !inputMonth.value) {
-                selectDay.style.borderColor = 'red';
-                selectMonth.style.borderColor = 'red';
-                return false;
-            } else {
-                selectDay.style.borderColor = 'black';
-                selectMonth.style.borderColor = 'black';
-                return true;
+        dayAndMonth = document.getElementById('current-date');
+        dayAndMonth.onclick = function() {
+            dayAndMonth.type = 'date';
+            if (!dayAndMonth.value) {
+                dayAndMonth.style.borderColor = 'red';
             }
         };
-        inputMonth.onclick = function() {
-            dayMonthPrintValidation();
-            inputMonth.style.display = 'none';
-            selectMonth.style.display = 'inline';
+        dayAndMonth.onblur = function() {
+            dayAndMonth.type = 'text';
         };
-        selectMonth.onclick = function() {
-            var i, monthObj = {
-                january: 'հունվար',
-                february: 'փետրվար',
-                march: 'մարտ',
-                april: 'ապրիլ',
-                may: 'մայիս',
-                june: 'հունիս',
-                july: 'հուլիս',
-                august: 'օգոստոս',
-                september: 'սեպտեմբեր',
-                october: 'հոկտեմբեր',
-                november: 'նոյեմբեր',
-                december: 'դեկտեմբեր'
-            };
+        dayAndMonth.onchange = function() {
+            var dateValue,
+                dateMonth,
+                monthObj,
+                i;
+            dayAndMonth.type = 'text';
+            dateValue = dayAndMonth.value.split('-');
+            dateMonth = parseInt(dateValue[1], 10);
+            dayAndMonth.style.borderColor = 'black';
+            monthObj = ['հունվար', 'փետրվար', 'մարտ', 'ապրիլ', 'մայիս', 'հունիս', 'հուլիս', 'օգոստոս', 'սեկտեմբեր', 'հոկտոմբեր', 'նոյեմբեր', 'դեկտեմբեր'];
             for (i in monthObj) {
-                if (selectMonth.value === i) {
-                    inputMonth.value = monthObj[i];
+                i = parseInt(i, 10);
+                if ((i + 1) == dateMonth) {
+                    dateMonth = monthObj[i];
                 }
             }
-            selectMonth.style.display = 'none';
-            inputMonth.style.display = 'inline';
-            inputMonth.style.borderColor = 'black';
+            dayAndMonth.value = '«' + dateValue[2] + '»' + ' ' + dateMonth + ' ' + dateValue[0] + 'թ․';
         };
     }
     var isValid = function(inputs) {

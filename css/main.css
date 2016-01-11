@@ -179,29 +179,9 @@ hr {
     width: 75%;
 }
 
-.signature .item .day,
-.signature .item .month {
-    display: none;
-}
-
-.signature .item .day {
-    height: 32px;
-    width: 15%;
-}
-
-.signature .item .input-day {
-    height: 30px;
-    width: 14%;
-}
-
-.signature .item .month ,
-.signature .item .input-month {
-    height: 30px;
-    width: 55%;
-}
-
-.signature .item .year {
-    width: 10%;
+.signature .item .current-date {
+    float: right;
+    width: 90%;
 }
 
 .form-request {
