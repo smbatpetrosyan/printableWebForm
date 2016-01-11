@@ -52,9 +52,9 @@
         declarer.onkeyup = function() {
             var value = document.getElementById('declarer').value;
             if (value) {
-                document.getElementById('userName').innerHTML = value;
+                document.getElementById('userName').innerHTML = '<b>' + value + '</b>';
             } else {
-                document.getElementById('userName').innerHTML = 'ԱՐՄԻՆԵ ԳՐԻԳՈՐՅԱՆ';
+                document.getElementById('userName').innerHTML = '<b>' + 'ԱՐՄԻՆԵ ԳՐԻԳՈՐՅԱՆ' + '</b>';
             }
             checkSpace(value);
         };
