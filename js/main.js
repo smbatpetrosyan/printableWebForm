@@ -15,7 +15,7 @@
         setEvents(inputs);
         printButton = document.querySelector('.print');
         printButton.onclick = function() {
-            if (!(isValid(inputs) && passportValidation() && checkSpace(document.getElementById('declarer').value))) {
+            if (!(isValid(inputs) && passportValidation() && checkSpace(document.getElementById('declarer').value) && dayMonthPrintValidation() && regionValidation())) {
                 window.alert('Լրացրեք բոլոր դաշտերը բացառությամբ ստորագրություն դաշտի։');
             } else {
                 window.print();
@@ -33,6 +33,13 @@
             document.getElementById('address').innerHTML = address[region].street + ', ' + address[region].postIndex;
         };
         selectedRegion = document.querySelector('#allRegions');
+        var regionValidation = function() {
+            if (!selectedRegion.value) {
+                return false;
+            } else {
+                return true;
+            }
+        };
         selectedRegion.onchange = function() {
             var region, city;
             region = getSelectedRegion();
@@ -141,18 +148,31 @@
         inputDay = document.getElementById('input-day');
         selectDay = document.getElementById('select-day');
         inputDay.onclick = function() {
+            dayMonthPrintValidation();
             inputDay.style.display = 'none';
             selectDay.style.display = 'inline';
-            inputDay.style.borderColor = 'black';
         };
         selectDay.onclick = function() {
             selectDay.style.display = 'none';
             inputDay.style.display = 'inline';
+            inputDay.style.borderColor = 'black';
             inputDay.value = selectDay.value;
         };
         inputMonth = document.getElementById('input-month');
         selectMonth = document.getElementById('month');
+        var dayMonthPrintValidation = function() {
+            if (!inputDay.value || !inputMonth.value) {
+                selectDay.style.borderColor = 'red';
+                selectMonth.style.borderColor = 'red';
+                return false;
+            } else {
+                selectDay.style.borderColor = 'black';
+                selectMonth.style.borderColor = 'black';
+                return true;
+            }
+        };
         inputMonth.onclick = function() {
+            dayMonthPrintValidation();
             inputMonth.style.display = 'none';
             selectMonth.style.display = 'inline';
         };

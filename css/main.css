@@ -9,19 +9,20 @@ body > div {
 
 select,
 button {
-    font-family: "sylfaen";
+    font-family: 'Source Sans Pro';
 }
 
 input {
-    height: 30px;
-    font-weight: 600;
-}
-
-input,
-textarea {
     background-color: #f0f0f0;
-    font-family: "Courier New", Courier, monospace;
+    border: none;
+    border-bottom: 1px solid;
+    font-family: 'Source Sans Pro';
     font-size: 24px !important;
+    font-weight: 600;
+    height: 30px;
+    margin-left: 1%;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .first-proem .item >*,
@@ -59,7 +60,7 @@ textarea {
 }
 
 .dashedLine {
-    width:100%;;
+    width: 100%;;
 }
 
 .solicitation > div {
@@ -88,16 +89,6 @@ hr {
 .location,
 .general-inf {
     display: initial !important;
-}
-
-input {
-    border: none;
-    border-bottom: 1px solid;
-    font-size: 12px;
-    margin-left: 1%;
-    margin-top: 20px;
-    text-align: center;
-    width: 96%;
 }
 
 .undertext,
@@ -207,8 +198,6 @@ input {
 .signature .item .input-month {
     height: 30px;
     width: 55%;
-    font-family: "Courier New", Courier, monospace;
-    font-weight: 600;
 }
 
 .signature .item .year {
