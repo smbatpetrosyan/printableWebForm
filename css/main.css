@@ -8,14 +8,17 @@ body > div {
 }
 
 select,
-button {
-    font-family: 'Source Sans Pro';
+button,
+span,
+div,
+p {
+    font-family: sans-serif;
 }
 
 input {
     border: none;
     border-bottom: 1px solid;
-    font-family: 'Source Sans Pro';
+    font-family: monospace;
     font-size: 24px !important;
     font-weight: 600;
     height: 30px;

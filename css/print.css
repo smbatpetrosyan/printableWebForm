@@ -19,6 +19,14 @@
         width: 100% !important;
     }
 
+    select,
+    button,
+    span,
+    div,
+    p {
+        font-family: serif;
+    }
+
     input,
     select,
     button {
@@ -58,6 +66,7 @@
 
     input {
         color: black !important;
+        font-family: monospace;
     }
 
     .cover {
