@@ -11,10 +11,12 @@
             selectDay,
             inputMonth,
             selectMonth,
-            dayAndMonth;
+            dayAndMonth,
+            message;
         inputs = document.getElementsByTagName('input');
         setEvents(inputs);
         printButton = document.querySelector('.print');
+        message = document.getElementsByClassName('message');
         printButton.onclick = function() {
             if (!(isValid(inputs) && passportValidation() && checkSpace(document.getElementById('declarer').value) && regionValidation())) {
                 window.alert('Լրացրեք բոլոր դաշտերը բացառությամբ ստորագրություն դաշտի։');
@@ -61,16 +63,18 @@
         var checkSpace = function(value) {
             value = value.trim();
             var space = value.split(' ');
-            if (space.length === 3) {
+            if (value && space.length !== 3) {
+                declarer.style.borderColor = 'red';
+                declarer.style.color = '#a94442';
+                declarer.style.backgroundColor = '#f2dede';
+                message[0].style.visibility = 'visible';
+                return false;
+            } else {
                 declarer.style.borderColor = 'black';
                 declarer.style.color = 'black';
                 declarer.style.backgroundColor = '#f0f0f0';
+                message[0].style.visibility = 'hidden';
                 return true;
-            } else {
-                declarer.style.borderColor = 'red';
-                declarer.style.color = 'red';
-                declarer.style.backgroundColor = '#efd6e1';
-                return false;
             }
         };
         checkPassportSeria = document.getElementById('seria');
@@ -82,18 +86,20 @@
                 value,
                 inputValue;
             regExp = /^[A-Z]{2}[0-9]{7}$/;
-            value = document.getElementById('seria').value;
+            value = checkPassportSeria.value;
             value = value.trim();
             inputValue = regExp.exec(value);
-            if (inputValue == null) {
+            if (value && inputValue == null) {
                 checkPassportSeria.style.borderColor = 'red';
-                checkPassportSeria.style.color = 'red';
-                seria.style.backgroundColor = '#efd6e1';
+                checkPassportSeria.style.color = '#a94442';
+                checkPassportSeria.style.backgroundColor = '#f2dede';
+                message[1].style.visibility = 'visible';
                 return false;
             } else {
                 checkPassportSeria.style.borderColor = 'black';
                 checkPassportSeria.style.color = 'black';
-                seria.style.backgroundColor = '#f0f0f0';
+                checkPassportSeria.style.backgroundColor = '#f0f0f0';
+                message[1].style.visibility = 'hidden';
                 return true;
             }
         };
@@ -142,14 +148,16 @@
             regExp = /^[0-9]{3}$/;
             code.value = code.value.trim();
             value = regExp.exec(code.value);
-            if (!value) {
+            if (code.value && value == null) {
                 code.style.borderColor = 'red';
-                code.style.color = 'red';
-                code.style.backgroundColor = '#efd6e1';
+                code.style.color = '#a94442';
+                code.style.backgroundColor = '#f2dede';
+                message[2].style.visibility = 'visible';
             } else {
                 code.style.borderColor = 'black';
                 code.style.color = 'black';
                 code.style.backgroundColor = '#f0f0f0';
+                message[2].style.visibility = 'hidden';
             }
         };
         regionSelectVisible = document.getElementById('assign');

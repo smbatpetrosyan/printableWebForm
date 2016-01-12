@@ -97,10 +97,13 @@ hr {
     font-size: 20px;
 }
 
-.declarer,
 .location,
 .general-inf {
     display: initial !important;
+}
+
+.declarer {
+    display: inline-table !important;
 }
 
 .undertext,
@@ -129,6 +132,7 @@ hr {
 .dec,
 .declarer .undertext {
     width: 96%;
+    margin-top: 5px;
 }
 
 .declarer .undertext,
@@ -142,6 +146,15 @@ hr {
 .passport .item > input,
 .passport .item .undertext {
     width: 68%;
+}
+
+.passport .item > input {
+    margin-top: 5px; 
+}
+
+.code-item .message {
+    margin-top: -12px;
+    margin-bottom: -17px;
 }
 
 .date > input {
@@ -290,4 +303,12 @@ button {
 
 button:hover {
     background-color: #ccc;
+}
+
+.message {
+    text-align: center;
+    margin: auto;
+    font-size: 12px;
+    color: red;
+    visibility: hidden;
 }
