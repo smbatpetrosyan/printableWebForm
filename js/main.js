@@ -64,10 +64,12 @@
             if (space.length === 3) {
                 declarer.style.borderColor = 'black';
                 declarer.style.color = 'black';
+                declarer.style.backgroundColor = '#f0f0f0';
                 return true;
             } else {
                 declarer.style.borderColor = 'red';
                 declarer.style.color = 'red';
+                declarer.style.backgroundColor = '#efd6e1';
                 return false;
             }
         };
@@ -86,10 +88,12 @@
             if (inputValue == null) {
                 checkPassportSeria.style.borderColor = 'red';
                 checkPassportSeria.style.color = 'red';
+                seria.style.backgroundColor = '#efd6e1';
                 return false;
             } else {
                 checkPassportSeria.style.borderColor = 'black';
                 checkPassportSeria.style.color = 'black';
+                seria.style.backgroundColor = '#f0f0f0';
                 return true;
             }
         };
@@ -111,9 +115,15 @@
             }
         };
         date.onblur = function() {
+            date.readOnly = false;
             date.type = 'text';
+            if (date.value.length !== 10) {
+                date.value = '';
+                date.style.backgroundColor = '#f0f0f0';
+            }
         };
         date.onchange = function() {
+            date.readOnly = false;
             var dateValue,
                 dateMonth;
             date.type = 'text';
@@ -121,6 +131,9 @@
             dateMonth = dateValue[1];
             date.style.borderColor = 'black';
             date.value = dateValue[2] + '.' + dateMonth + '.' + dateValue[0];
+        };
+        date.onkeydown = function() {
+            date.readOnly = true;
         };
         code = document.getElementById('code');
         code.onkeyup = function() {
@@ -132,9 +145,11 @@
             if (!value) {
                 code.style.borderColor = 'red';
                 code.style.color = 'red';
+                code.style.backgroundColor = '#efd6e1';
             } else {
                 code.style.borderColor = 'black';
                 code.style.color = 'black';
+                code.style.backgroundColor = '#f0f0f0';
             }
         };
         regionSelectVisible = document.getElementById('assign');
@@ -153,10 +168,15 @@
                 dayAndMonth.style.borderColor = 'red';
             }
         };
+        dayAndMonth.onkeydown = function() {
+            dayAndMonth.readOnly = true;
+        };
         dayAndMonth.onblur = function() {
             dayAndMonth.type = 'text';
+            dayAndMonth.readOnly = false;
         };
         dayAndMonth.onchange = function() {
+            dayAndMonth.readOnly = false;
             var dateValue,
                 dateMonth,
                 monthObj,
