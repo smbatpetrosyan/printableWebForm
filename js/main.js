@@ -33,7 +33,7 @@
         }
         var getRegionById = function(region) {
             var address = dataJson.getAddress();
-            document.getElementById('address').innerHTML = address[region].street + ', ' + address[region].postIndex + ', ' + address[region].location;
+            document.getElementById('address').innerHTML = 'ՀՀ ոստիկանության անձնագրային և վիզաների վարչության' + ' ' + address[region].envelopeRec + '\n' + address[region].street + ', ' + address[region].postIndex + ', ' + address[region].location;
         };
         selectedRegion = document.querySelector('#allRegions');
         var regionValidation = function() {
@@ -115,6 +115,7 @@
         };
         date = document.getElementById('date');
         date.onclick = function() {
+            date.readOnly = false;
             date.type = 'date';
             if (!date.value) {
                 date.style.borderColor = 'red';
@@ -171,6 +172,7 @@
         };
         dayAndMonth = document.getElementById('current-date');
         dayAndMonth.onclick = function() {
+            dayAndMonth.readOnly = false;
             dayAndMonth.type = 'date';
             if (!dayAndMonth.value) {
                 dayAndMonth.style.borderColor = 'red';
