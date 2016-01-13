@@ -33,7 +33,7 @@
         }
         var getRegionById = function(region) {
             var address = dataJson.getAddress();
-            document.getElementById('address').innerHTML = address[region].street + ', ' + address[region].postIndex;
+            document.getElementById('address').innerHTML = address[region].street + ', ' + address[region].postIndex + ', ' + address[region].location;
         };
         selectedRegion = document.querySelector('#allRegions');
         var regionValidation = function() {
