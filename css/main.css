@@ -259,7 +259,7 @@ hr {
     border-width: 2px;
     height: 30%;
     padding: 1%;
-    width: 32%;
+    width: 37%;
 }
 
 .requestor {
@@ -281,7 +281,7 @@ div.requestor > img,
 div.signed > img {
     background-color: white;
     height: 22px;
-    margin-left: 255px;
+    margin-left: 294px;
     margin-top: 81px;
     position: absolute;
     width: 33px;
