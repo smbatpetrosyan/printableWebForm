@@ -163,7 +163,7 @@ hr {
 
 .location > input,
 .location .undertext {
-    width: 88.6%;
+    width: 86.6%;
 }
 
 .passport .item .undertext {
@@ -173,6 +173,7 @@ hr {
 .under-text {
     margin-top: 9px;
     padding-left: 25%;
+    margin: inherit;
 }
 
 .date .undertext {
@@ -309,9 +310,9 @@ button:hover {
     visibility: hidden;
 }
 
-@media (min-width: 1670px) and (max-width: 1895px) {
+/*@media (min-width: 320px) and (max-width: 1995px) {
     .location > input,
     .location .undertext {
         width: 86.6%;
     }
-}
+}*/
