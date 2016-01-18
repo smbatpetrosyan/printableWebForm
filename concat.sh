@@ -8,16 +8,18 @@ jsFiles=`find js/ -name '*.js'`;
 cssFiles=`find css/ -name '*.css'`;
 touch tmp;
 head -$bodyPosition printableWebForm.html > tmp;
-echo "$tab$tab<script>" >> tmp;
-for file in $jsFiles; do
-	cat $file >> tmp;
-done
-echo "$tab$tab</script>" >> tmp;
-echo "$tab$tab<style>" >> tmp;
-for file in $cssFiles; do
-	cat $file >> tmp;
-done
-echo "$tab$tab</style>" >> tmp;
+addMinificatedFiles() {
+	echo "$tab$tab<$1>" >> tmp;
+	echo $2;
+	for file in $2; do
+		content=`cat $file >> tmp`;
+		echo "$tab$tab$tab$content" >> tmp;
+	done
+	echo "$tab$tab</$1>" >> tmp;
+}
+addMinificatedFiles "script" "$jsFiles";
+addMinificatedFiles "style" "$cssFiles";
+
 sed -i 1,$((bodyPosition))d printableWebForm.html;
 cat printableWebForm.html >> tmp;
 mv tmp printableWebForm.html;
