@@ -127,8 +127,17 @@ hr {
 
 .dec,
 .declarer .undertext {
-    width: 960px;
+    width: 964px;
     margin-top: 5px;
+}
+
+.declarer .message,
+.passport .item .message {
+    margin-top: -50px !important;
+}
+
+.passport-code .message {
+    margin-top: -65px !important;
 }
 
 .declarer .undertext,
@@ -144,15 +153,6 @@ hr {
     width: 68%;
 }
 
-.passport .item > input {
-    margin-top: 5px; 
-}
-
-.code-item .message {
-    margin-top: -12px;
-    margin-bottom: -17px;
-}
-
 .date > input {
     width: 79%;
 }
@@ -161,13 +161,21 @@ hr {
     width: 98%;
 }
 
+.passport-code .undertext {
+    margin-top: 44px;
+}
+
+.passport-code .message {
+    text-align: center;
+}
+
 .location > input,
 .location .undertext {
     width: 86.6%;
 }
 
 .passport .item .undertext {
-    padding-right: 12%;
+    padding-right: 10%;
 }
 
 .under-text {
@@ -303,9 +311,6 @@ button:hover {
 }
 
 .message {
-    text-align: center;
-    margin: auto;
-    font-size: 12px;
     color: red;
     visibility: hidden;
 }
