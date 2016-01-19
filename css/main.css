@@ -261,18 +261,14 @@ hr {
 .cover-border {
     border-style: dotted;
     border-width: 2px;
-    height: 30%;
+    height: 36%;
     padding: 1%;
-    width: 37%;
-}
-
-.requestor {
-    margin: 2%;
+    width: 39%;
+    margin: 1%;
 }
 
 .signed {
     float: right;
-    margin: 2%;
 }
 
 .requestor p,
@@ -285,8 +281,8 @@ div.requestor > img,
 div.signed > img {
     background-color: white;
     height: 22px;
-    margin-left: 294px;
-    margin-top: 81px;
+    margin-left: 311px;
+    margin-top: 102px;
     position: absolute;
     width: 33px;
 }
@@ -294,7 +290,7 @@ div.signed > img {
 div.dashedLine > img {
     float: right;
     height: 22px;
-    margin-top: -1.8%;
+    margin-top: -2%;
     width: 33px;
 }
 
