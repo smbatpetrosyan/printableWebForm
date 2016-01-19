@@ -99,7 +99,7 @@
             value = checkPassportSeria.value;
             value = value.trim();
             inputValue = regExp.exec(value);
-            if (value && inputValue == null) {
+            if (value && inputValue === null) {
                 checkPassportSeria.style.borderColor = 'red';
                 checkPassportSeria.style.color = '#a94442';
                 checkPassportSeria.style.backgroundColor = '#f2dede';
@@ -162,7 +162,7 @@
             regExp = /^[0-9]{3}$/;
             code.value = code.value.trim();
             value = regExp.exec(code.value);
-            if (code.value && value == null) {
+            if (code.value && value === null) {
                 code.style.borderColor = 'red';
                 code.style.color = '#a94442';
                 code.style.backgroundColor = '#f2dede';
@@ -210,7 +210,7 @@
             }
             dayAndMonth.value = '«' + dateValue[2] + '»' + ' ' + dateMonth + ' ' + dateValue[0] + 'թ․';
         };
-    }
+    };
     var isValid = function(inputs) {
         var i, input, inputsLength = inputs.length;
         for (i = 0; i < inputsLength; i++) {
