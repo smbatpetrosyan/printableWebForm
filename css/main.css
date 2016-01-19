@@ -56,7 +56,6 @@ input {
 .second-part .regions {
     border-color: red;
     float: right;
-    margin-top: 10px;
     width: 200px;
 }
 
@@ -67,7 +66,7 @@ input,
 
 .second-part .assign {
     text-align: right;
-    margin-left: 49%;
+    margin-left: 56%;
     margin-top: -15px;
 }
 
@@ -162,7 +161,7 @@ hr {
 }
 
 .passport-code .undertext {
-    margin-top: 44px;
+    margin-top: 54px;
 }
 
 .passport-code .message {
@@ -171,7 +170,7 @@ hr {
 
 .location > input,
 .location .undertext {
-    width: 86.6%;
+    width: 88.6%;
 }
 
 .passport .item .undertext {
