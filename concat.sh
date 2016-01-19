@@ -10,7 +10,6 @@ touch tmp;
 head -$bodyPosition printableWebForm.html > tmp;
 addMinificatedFiles() {
 	echo "$tab$tab<$1>" >> tmp;
-	echo $2;
 	for file in $2; do
 		content=`cat $file >> tmp`;
 		echo "$tab$tab$tab$content" >> tmp;

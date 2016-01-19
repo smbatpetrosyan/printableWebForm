@@ -18,7 +18,7 @@
         printButton = document.querySelector('.print');
         message = document.getElementsByClassName('message');
         printButton.onclick = function() {
-            if (!(isValid(inputs) && passportValidation() && checkSpace(document.getElementById('declarer').value) && regionValidation())) {
+            if (!(isValid(inputs) && passportValidation() && checkSpace(document.getElementById('declarer').value) && regionValidation() && checkCodeValidation())) {
                 window.alert('Լրացրեք բոլոր դաշտերը բացառությամբ ստորագրություն դաշտի։');
             } else {
                 window.print();
@@ -30,25 +30,35 @@
             allRegions = document.getElementById('allRegions');
             selectedRegion = allRegions.options[allRegions.selectedIndex].value;
             return selectedRegion;
-        }
+        };
         var getRegionById = function(region) {
             var address = dataJson.getAddress();
             document.getElementById('address').innerHTML = '<b>' + 'ՀՀ ոստիկանության անձնագրային և վիզաների վարչության' + ' ' + address[region].envelopeRec + '</b><br>' + address[region].street + ', ' + address[region].postIndex + ', ' + address[region].location;
         };
         selectedRegion = document.querySelector('#allRegions');
-        var regionValidation = function() {
-            if (!selectedRegion.value) {
-                return false;
-            } else {
-                return true;
-            }
-        };
         selectedRegion.onchange = function() {
             var region, city;
             region = getSelectedRegion();
             getRegionById(region);
             city = dataJson.getAddress();
             document.getElementById('assign').innerHTML = city[region].recipient + '</br>' + city[region].name;
+        };
+        regionSelectVisible = document.getElementById('assign');
+        regionSelectVisible.onclick = function() {
+            selectedRegion.style.display = 'flex';
+            regionSelectVisible.innerHTML = '';
+        };
+        selectedRegion.onclick = function() {
+            selectedRegion.style.display = 'none';
+            regionSelectVisible.style.display = 'flex';
+        };
+        var regionValidation = function() {
+            var region = regionSelectVisible.innerHTML;
+            if (!(selectedRegion.value && region)) {
+                return false;
+            } else {
+                return true;
+            }
         };
         declarer = document.getElementById('declarer');
         declarer.onkeyup = function() {
@@ -144,6 +154,9 @@
         };
         code = document.getElementById('code');
         code.onkeyup = function() {
+            checkCodeValidation();
+        };        
+        var checkCodeValidation = function() {
             var regExp,
                 value;
             regExp = /^[0-9]{3}$/;
@@ -154,21 +167,14 @@
                 code.style.color = '#a94442';
                 code.style.backgroundColor = '#f2dede';
                 message[2].style.visibility = 'visible';
+                return false;
             } else {
                 code.style.borderColor = 'black';
                 code.style.color = 'black';
                 code.style.backgroundColor = '#f0f0f0';
                 message[2].style.visibility = 'hidden';
+                return true;
             }
-        };
-        regionSelectVisible = document.getElementById('assign');
-        regionSelectVisible.onclick = function() {
-            selectedRegion.style.display = 'flex';
-            regionSelectVisible.style.display = 'none';
-        };
-        selectedRegion.onclick = function() {
-            selectedRegion.style.display = 'none';
-            regionSelectVisible.style.display = 'flex';
         };
         dayAndMonth = document.getElementById('current-date');
         dayAndMonth.onclick = function() {
@@ -209,6 +215,7 @@
         var i, input, inputsLength = inputs.length;
         for (i = 0; i < inputsLength; i++) {
             input = inputs[i];
+            input.value = input.value.trim();
             if (!input.value) {
                 return false;
             }

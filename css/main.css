@@ -67,7 +67,8 @@ input,
 .second-part .assign {
     text-align: right;
     margin-left: 56%;
-    margin-top: -15px;
+    margin-top: -15px !important;
+    font-family: monospace;
 }
 
 .dashedLine {
