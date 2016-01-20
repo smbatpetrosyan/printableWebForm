@@ -34,3 +34,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-includes');
     grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'includes']);
 };
+/*
+sudo npm install grunt-contrib-jshint --save-dev
+sudo npm install grunt-contrib-uglify --save-dev
+sudo npm install grunt-contrib-cssmin --save-dev
+sudo npm install grunt-includes --save-dev
+*/

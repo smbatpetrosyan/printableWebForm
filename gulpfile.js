@@ -28,8 +28,8 @@ gulp.task("include", function() {
 });
 gulp.task('default', ['lint', 'compress', 'minifyCss', 'include']);
 /*
-sudo npm install --save-dev gulp-uglify
 sudo npm install jshint gulp-jshint --save-dev
+sudo npm install --save-dev gulp-uglify
 sudo npm install --save-dev gulp-minify-css
 sudo npm install --save-dev gulp-concat
 sudo npm install gulp-include
