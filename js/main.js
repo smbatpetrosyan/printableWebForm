@@ -41,16 +41,14 @@
             region = getSelectedRegion();
             getRegionById(region);
             city = dataJson.getAddress();
+            selectedRegion.style.display = 'none';
+            regionSelectVisible.style.display = 'flex';
             document.getElementById('assign').innerHTML = city[region].recipient + '</br>' + city[region].name;
         };
         regionSelectVisible = document.getElementById('assign');
         regionSelectVisible.onclick = function() {
             selectedRegion.style.display = 'flex';
             regionSelectVisible.innerHTML = '';
-        };
-        selectedRegion.onclick = function() {
-            selectedRegion.style.display = 'none';
-            regionSelectVisible.style.display = 'flex';
         };
         var regionValidation = function() {
             var region = regionSelectVisible.innerHTML;
