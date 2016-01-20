@@ -24,28 +24,28 @@
                 window.print();
             }
         };
+        selectedRegion = document.getElementById('allRegions');
+        regionSelectVisible = document.getElementById('assign');
         var getSelectedRegion = function() {
-            var allRegions,
-                selectedRegion;
-            allRegions = document.getElementById('allRegions');
-            selectedRegion = allRegions.options[allRegions.selectedIndex].value;
-            return selectedRegion;
+            var selectedRegionCode = selectedRegion.options[selectedRegion.selectedIndex].value;
+            return selectedRegionCode;
         };
         var getRegionById = function(region) {
             var address = dataJson.getAddress();
             document.getElementById('address').innerHTML = '<b>' + 'ՀՀ ոստիկանության անձնագրային և վիզաների վարչության' + ' ' + address[region].envelopeRec + '</b><br>' + address[region].street + ', ' + address[region].postIndex + ', ' + address[region].location;
         };
-        selectedRegion = document.querySelector('#allRegions');
         selectedRegion.onchange = function() {
             var region, city;
             region = getSelectedRegion();
+            if (!region) {
+                return false;
+            }
             getRegionById(region);
             city = dataJson.getAddress();
             selectedRegion.style.display = 'none';
             regionSelectVisible.style.display = 'flex';
-            document.getElementById('assign').innerHTML = city[region].recipient + '</br>' + city[region].name;
+            regionSelectVisible.innerHTML = city[region].recipient + '</br>' + city[region].name;
         };
-        regionSelectVisible = document.getElementById('assign');
         regionSelectVisible.onclick = function() {
             selectedRegion.style.display = 'flex';
             regionSelectVisible.innerHTML = '';
