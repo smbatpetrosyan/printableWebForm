@@ -21,12 +21,12 @@ gulp.task('minifyCss', function() {
     .pipe(concat('absolute.css'))
     .pipe(gulp.dest('./gulp/'));
 });
-gulp.task("include", function() { 
+gulp.task("includes", function() { 
     gulp.src("applicationFormGulp.html")
     .pipe(include())
     .pipe(gulp.dest("./gulp/"));
 });
-gulp.task('default', ['lint', 'compress', 'minifyCss', 'include']);
+gulp.task('default', ['lint', 'compress', 'minifyCss', 'includes']);
 /*
 sudo npm install jshint gulp-jshint --save-dev
 sudo npm install --save-dev gulp-uglify
