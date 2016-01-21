@@ -27,14 +27,26 @@ module.exports = function(grunt) {
                 }
             }
         },
-        clean: ['build/*.css', 'build/*.js']
+        clean: ['build/*.css', 'build/*.js'],
+        htmlmin: {
+            options: {
+                removeComments: true,
+                collapseWhitespace: true
+            },
+            compile: {
+                files: {
+                    'build/printableWebForm.html': 'build/printableWebForm.html'
+                }
+            }
+        }
     });
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-includes');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'includes', 'clean']);
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'includes', 'clean','htmlmin']);
 };
 /*
 sudo npm install grunt-contrib-jshint --save-dev
@@ -42,4 +54,5 @@ sudo npm install grunt-contrib-uglify --save-dev
 sudo npm install grunt-contrib-cssmin --save-dev
 sudo npm install grunt-includes --save-dev
 sudo npm install grunt-contrib-clean --save-dev
+sudo npm install grunt-contrib-htmlmin --save-dev
 */

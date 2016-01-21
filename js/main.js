@@ -38,6 +38,7 @@
             var region, city;
             region = getSelectedRegion();
             if (!region) {
+                document.getElementById('address').innerHTML = 'ԱՆՁՆԱԳՐԱՅԻՆ ԵՎ ՎԻԶԱՆԵՐԻ ՎԱՐՉՈՒԹՅԱՆ ԵՎ ՆՐԱ ՍՏՈՐԱԲԱԺԱՆՈՒՄՆԵՐԻ ՀԱՍՑԵ և ՀԵՌԱԽՈՍ';
                 return false;
             }
             getRegionById(region);
