@@ -75,7 +75,7 @@
             if (value) {
                 document.getElementById('userName').innerHTML = '<b>' + value + '</b>';
             } else {
-                document.getElementById('userName').innerHTML = '<b>' + 'ԱՐՄԻՆԵ ԳՐԻԳՈՐՅԱՆ' + '</b>';
+                document.getElementById('userName').innerHTML = '<b>' + '<Անուն Հայրանուն Ազգանուն>' + '</b>';
             }
             checkSpace(value);
         };
@@ -128,7 +128,7 @@
                 document.getElementById('userAddress').innerHTML = location.value;
                 location.style.borderColor = 'black';
             } else {
-                document.getElementById('userAddress').innerHTML = 'ԵՐԵՎԱՆ, ԳԱՐԵԳԻՆ ՆժԴԵՀԻ 20/14';
+                document.getElementById('userAddress').innerHTML = '<Հասցե>';
                 location.style.borderColor = 'red';
             }
         };

@@ -1,12 +1,12 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         jshint: {
-            files: ['Gruntfile.js', 'js/*.js'],
+            files: ['Gruntfile.js', 'js/*.js', 'js/*.json'],
         },
         uglify: {
             compress: {
                 files: {
-                    'build/compress.js': ['js/*.js']
+                    'build/compress.js': ['js/*.js', 'js/*.json']
                 }
             }
         },
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         includes: {
             includePath: {
                 src: ['main.html'],
-                dest: 'build/printableWebForm.html',
+                dest: 'build/printable-web-form.html',
                 options: {
                     includePath: 'build/'
                 }
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
             },
             compile: {
                 files: {
-                    'build/printableWebForm.html': 'build/printableWebForm.html'
+                    'build/printable-web-form.html': 'build/printable-web-form.html'
                 }
             }
         }
