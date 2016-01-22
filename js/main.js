@@ -54,8 +54,12 @@
             showSelectedRegionValue();
         };
         regionSelectVisible.onclick = function() {
-            selectedRegion.style.display = 'flex';
             regionSelectVisible.innerHTML = '';
+            selectedRegion.style.display = 'flex';
+            selectedRegion.focus();
+        };
+        selectedRegion.onblur = function() {
+            showSelectedRegionValue();
         };
         var regionValidation = function() {
             var region = regionSelectVisible.innerHTML;
