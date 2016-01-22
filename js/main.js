@@ -34,7 +34,7 @@
             var address = dataJson.getAddress();
             document.getElementById('address').innerHTML = '<b>' + 'ՀՀ ոստիկանության անձնագրային և վիզաների վարչության' + ' ' + address[region].envelopeRec + '</b><br>' + address[region].street + ', ' + address[region].postIndex + ', ' + address[region].location;
         };
-        selectedRegion.onchange = function() {
+        var showSelectedRegionValue = function() {
             var region, city;
             region = getSelectedRegion();
             if (!region) {
@@ -46,6 +46,12 @@
             selectedRegion.style.display = 'none';
             regionSelectVisible.style.display = 'flex';
             regionSelectVisible.innerHTML = city[region].recipient + '</br>' + city[region].name;
+        };
+        selectedRegion.onchange = function() {
+            showSelectedRegionValue();
+        };
+        selectedRegion.onclick = function() {
+            showSelectedRegionValue();
         };
         regionSelectVisible.onclick = function() {
             selectedRegion.style.display = 'flex';
